@@ -1,0 +1,14 @@
+(dp1
+V'2'.zfill(0)
+p2
+I445
+sVroundint(12.5)
+p3
+I340
+sV[ float(n) for n in l ]
+p4
+I135
+sVdt.datetime
+p5
+I424
+s.

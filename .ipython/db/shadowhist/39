@@ -1,0 +1,14 @@
+(dp1
+Vif 'int' in tipe(2): print '>'
+p2
+I24
+sV[int(n) for n in "01/02/1982".split("/")].reverse()
+p3
+I668
+sVnp.version()
+p4
+I160
+sVmin(1,2,4,-1)
+p5
+I345
+s.

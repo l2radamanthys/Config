@@ -1,0 +1,11 @@
+(dp1
+Vssl
+p2
+I8
+sVjson.encoder('hola')
+p3
+I413
+sVint(round(12.5))
+p4
+I341
+s.

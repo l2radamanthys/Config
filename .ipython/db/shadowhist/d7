@@ -1,0 +1,5 @@
+(dp1
+Vuser = User.objects.get(username='pac_01')
+p2
+I627
+s.

@@ -1,0 +1,23 @@
+(dp1
+Vimport lxml
+p2
+I289
+sVimport pylab
+p3
+I393
+sVpl = dbus.Interface(proxy_obj, 'org.gnome.Rhythmbox.Player')
+p4
+I551
+sVr.seed.__doc__
+p5
+I217
+sVu = User.groups()
+p6
+I630
+sVc[:-1]
+p7
+I567
+sVcanvas.
+p8
+I441
+s.

@@ -1,0 +1,11 @@
+(dp1
+Vimport pyaudiere
+p2
+I584
+sVprint a
+p3
+I28
+sVpygame.font.get_default_font()
+p4
+I50
+s.

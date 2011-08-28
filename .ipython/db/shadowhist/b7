@@ -1,0 +1,14 @@
+(dp1
+Vprint u
+p2
+I592
+sVfor a in os.walk('/home'):
+p3
+I470
+sVl = [1,2,3,4,5]
+p4
+I204
+sVddl
+p5
+I11
+s.

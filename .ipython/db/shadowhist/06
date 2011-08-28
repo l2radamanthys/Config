@@ -1,0 +1,14 @@
+(dp1
+Vprint a.readlines
+p2
+I252
+sVfrom django.contrib.auth.models import Group
+p3
+I624
+sVprint os.path.curdir()
+p4
+I125
+sVa.mode
+p5
+I259
+s.

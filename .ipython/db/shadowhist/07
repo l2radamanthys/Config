@@ -1,0 +1,20 @@
+(dp1
+Vprint chr(127)
+p2
+I202
+sVcl
+p3
+I84
+sVc = "hola \u005cn"
+p4
+I562
+sVprint chr(255)
+p5
+I193
+sViter(a)
+p6
+I164
+sVc[:1]
+p7
+I565
+s.

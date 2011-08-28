@@ -1,0 +1,14 @@
+(dp1
+Vfrom reportlab import pdfgen
+p2
+I433
+sVl.index(9)
+p3
+I266
+sVp = s.get_object('org.gnome.Rhythmbox', '/org/gnome/Rhythmbox/Player')
+p4
+I550
+sVu.groups[0]
+p5
+I601
+s.

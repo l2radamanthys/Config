@@ -1,0 +1,23 @@
+(dp1
+Vos.path.dirname
+p2
+I44
+sVm.list()
+p3
+I521
+sVprint u.groups
+p4
+I643
+sVdls
+p5
+I6
+sVa = sys.stdout
+p6
+I248
+sVa.resize(3)
+p7
+I297
+sVu = User.objects.get(name='test_01')
+p8
+I635
+s.

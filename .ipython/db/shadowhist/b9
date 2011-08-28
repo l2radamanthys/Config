@@ -1,0 +1,8 @@
+(dp1
+Vl[j:k]
+p2
+I230
+sVlist = [int(n) for n in "01/02/1982".split("/")].reverse()
+p3
+I666
+s.

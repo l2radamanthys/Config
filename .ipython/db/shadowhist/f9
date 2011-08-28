@@ -1,0 +1,17 @@
+(dp1
+Vprint chr(10)
+p2
+I182
+sVa[2:-2]
+p3
+I310
+sVa*a
+p4
+I353
+sVu.get_full_name()
+p5
+I641
+sVl.__doc__
+p6
+I214
+s.

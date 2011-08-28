@@ -1,0 +1,11 @@
+(dp1
+Vffl
+p2
+I5
+sVu = auth.authenticate(username='test_02', password='123456')
+p3
+I593
+sVprint("hola")
+p4
+I669
+s.

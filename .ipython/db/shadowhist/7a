@@ -1,0 +1,26 @@
+(dp1
+Vb = [1.44,56]
+p2
+I507
+sVprint os.curdir()
+p3
+I453
+sVquit()
+p4
+I2
+sVprint u,groups
+p5
+I642
+sVimport pickle
+p6
+I366
+sVimport numpy as np
+p7
+I114
+sVk = l * 100
+p8
+I417
+sVos.path.dirname('/home')
+p9
+I35
+s.

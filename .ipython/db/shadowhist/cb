@@ -1,0 +1,11 @@
+(dp1
+Vprint "ss"
+p2
+I73
+sVfrom django.contrib.auth.models import User, Group
+p3
+I612
+sVos.rename.__doc__
+p4
+I648
+s.

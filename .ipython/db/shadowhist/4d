@@ -1,0 +1,11 @@
+(dp1
+Vimport gtk
+p2
+I62
+sVrandom.randint(,3)
+p3
+I531
+sVa = range(20)
+p4
+I308
+s.

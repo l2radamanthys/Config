@@ -1,0 +1,11 @@
+(dp1
+Vos.system('cls')
+p2
+I68
+sVmath.floor(12.6)
+p3
+I337
+sVos.path.join('hola', 'mudno')
+p4
+I652
+s.

@@ -1,0 +1,11 @@
+(dp1
+Vprint chr(13)
+p2
+I185
+sVg = Group.objects.get('Medicos')
+p3
+I618
+sVdt.date.
+p4
+I656
+s.

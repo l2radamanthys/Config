@@ -1,0 +1,14 @@
+(dp1
+Vimport poplib
+p2
+I517
+sVa.resize(
+p3
+I293
+sVa.write('hola mundo \u005cn\u005cn jjaj')
+p4
+I253
+sVa.resize(1)
+p5
+I300
+s.

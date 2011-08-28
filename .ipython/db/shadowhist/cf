@@ -1,0 +1,14 @@
+(dp1
+Vos.listdir('/media')
+p2
+I561
+sVa.
+p3
+I505
+sVimport datetime as dt
+p4
+I423
+sVos.stat('os').st_size
+p5
+I54
+s.

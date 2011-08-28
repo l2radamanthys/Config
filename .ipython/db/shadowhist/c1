@@ -1,0 +1,11 @@
+(dp1
+Vtime.time.__doc__
+p2
+I106
+sVuser = User.objects.get(username__exact='pac_01')
+p3
+I626
+sVos.curdir('/home/wyrven')
+p4
+I452
+s.

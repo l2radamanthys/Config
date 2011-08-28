@@ -1,0 +1,27 @@
+l.pos(
+l.pos(
+l.pos(
+l.pos(3)
+l.pos(2)
+l.index(2)
+l.index(9)
+exit()
+import audiere
+import pyaudiere
+exit()
+from django.contrib import auth
+u = auth.authenticate(username='test_01', password='123456')
+u
+print u
+u = auth.authenticate(username='test_02', password='123456')
+print u
+exit()
+import inicializar.py
+exit()
+import inicializar.py
+import inicializar
+exit()
+print "hola"
+print("hola")
+py
+exit()

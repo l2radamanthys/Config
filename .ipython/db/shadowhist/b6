@@ -1,0 +1,11 @@
+(dp1
+Vt.tm_mday
+p2
+I92
+sVb=type(a)
+p3
+I116
+sVr = bus.get_object('org.gnome.Rhythmbox', '/org/gnome/Rhythmbox')
+p4
+I402
+s.

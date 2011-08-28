@@ -1,0 +1,8 @@
+(dp1
+Vu = User.objects.get(username__exact='test')
+p2
+I595
+sVzfill(67)
+p3
+I442
+s.

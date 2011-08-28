@@ -1,0 +1,13 @@
+(dp1
+Vimport dbus
+p2
+I399
+sVa.prod.__doc__
+p3
+I354
+sVu
+I591
+sVa = dt.datetime(1,2,3)
+p4
+I661
+s.

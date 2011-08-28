@@ -1,0 +1,11 @@
+(dp1
+Vprint chr(18)
+p2
+I190
+sVfrom reportlab.pdfgen import canvas
+p3
+I371
+sVsys.stderr.__doc__
+p4
+I245
+s.

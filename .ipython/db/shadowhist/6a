@@ -1,0 +1,8 @@
+(dp1
+Vimport pyckle
+p2
+I364
+sVm = poplib.POP3_SSL('pop.gmail.com', 995)
+p3
+I518
+s.

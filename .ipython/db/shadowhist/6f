@@ -1,0 +1,14 @@
+(dp1
+Vbus = dbus.SessionBus()
+p2
+I400
+sVa.read
+p3
+I256
+sVprint chr(16)
+p4
+I188
+sVint(u'1')
+p5
+I97
+s.

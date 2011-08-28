@@ -1,0 +1,20 @@
+(dp1
+Vl = range(15)
+p2
+I267
+sVprint chr(122)
+p3
+I200
+sVimport random as r
+p4
+I215
+sVprint chr(250)
+p5
+I197
+sVpygame.mixer.init()
+p6
+I585
+sVa = d.copy()
+p7
+I538
+s.
