@@ -2,15 +2,15 @@
 [styling]
 # foreground;background;bold;italic
 html_default=0x000000;0xffffff;false;false
-html_tag=0x000099;0xffffff;false;false
-html_tagunknown=0xff0000;0xffffff;false;false
-html_attribute=0x007f00;0xffffff;false;false
-html_attributeunknown=0xff0000;0xffffff;false;false
-html_number=0x800080;0xffffff;false;false
-html_doublestring=0xff901e;0xffffff;false;false
-html_singlestring=0xff901e;0xffffff;false;false
-html_other=0x800080;0xffffff;false;false
-html_comment=0x808080;0xffffff;false;false
+html_tag=0x0000FF;0xffffff;false;false
+html_tagunknown=0xff0000;0xFFFF80;false;false
+html_attribute=0x0063C6;0xffffff;false;false
+html_attributeunknown=0x006A00;0xFFFF80;false;false
+html_number=0xFF0000;0xffffff;false;false
+html_doublestring=0xC64000;0xffffff;false;false
+html_singlestring=0xC64000;0xffffff;false;false
+html_other=0x#9D009D;0xffffff;false;false
+html_comment=0x005900;0xffffff;false;false
 html_entity=0x800080;0xffffff;false;false
 html_tagend=0x000080;0xffffff;false;false
 # <?
@@ -23,7 +23,7 @@ html_script=0x000080;0xf0f0f0;false;false
 html_asp=0x004f4f;0xf0f0f0;false;false
 # <%@ ... %>
 html_aspat=0x004f4f;0xf0f0f0;false;false
-html_cdata=0x660099;0xffffff;false;false
+html_cdata=0xC40062;0xffffff;false;false
 html_question=0x0000ff;0xffffff;false;false
 html_value=0x660099;0xffffff;false;false
 html_xccomment=0x660099;0xffffff;false;false
@@ -41,14 +41,14 @@ sgml_1st_param_comment=0x406090;0xffffff;false;false
 sgml_error=0xff0000;0xffffff;false;false
 
 php_default=0x000000;0xffffff;false;false
-php_simplestring=0xff901e;0xffffff;false;false
+php_simplestring=0x4F4F4F;0xffffff;false;false
 php_hstring=0x008000;0xffffff;false;false
-php_number=0x606000;0xffffff;false;false
-php_word=0x000099;0xffffff;false;false
-php_variable=0x7f0000;0xffffff;false;false
-php_comment=0x808080;0xffffff;false;false
-php_commentline=0x808080;0xffffff;false;false
-php_operator=0x102060;0xffffff;false;false
+php_number=0xff0000;0xffffff;false;false
+php_word=0x0055AA;0xffffff;false;false
+php_variable=0x0000FF;0xffffff;false;false
+php_comment=0x005500;0xffffff;false;false
+php_commentline=0x005500;0xffffff;false;false
+php_operator=0xDD4800;0xffffff;false;false
 php_hstring_variable=0x101060;0xffffff;false;false
 php_complex_variable=0x105010;0xffffff;false;false
 
@@ -56,17 +56,17 @@ php_complex_variable=0x105010;0xffffff;false;false
 jscript_start=0x008080;0xffffff;false;false
 jscript_default=0x000000;0xffffff;false;false
 jscript_comment=0xd00000;0xffffff;false;false
-jscript_commentline=0xd00000;0xffffff;false;false
-jscript_commentdoc=0x3f5fbf;0xffffff;true;false
-jscript_number=0x007f00;0xffffff;false;false
+jscript_commentline=0x376918;0xffffff;false;false
+jscript_commentdoc=0x376918;0xffffff;true;false
+jscript_number=0xFF0000;0xffffff;false;false
 jscript_word=0x000000;0xffffff;false;false
 jscript_keyword=0x00007f;0xffffff;true;false
-jscript_doublestring=0xff901e;0xffffff;false;false
-jscript_singlestring=0xff901e;0xffffff;false;false
+jscript_doublestring=0x4F4F4F;0xffffff;false;false
+jscript_singlestring=0x4F4F4F;0xffffff;false;false
 # same as operators
-jscript_symbols=0x301010;0xffffff;false;false
+jscript_symbols=0xC16100;0xffffff;false;false
 jscript_stringeol=0x000000;0xe0c0e0;false;false
-jscript_regex=0x105090;0xffffff;false;false
+jscript_regex=0x8000FF;0xffffff;false;false
 
 # for embedded Python script (<script language="python">...</script>), Python styles from
 # filetypes.python are used
