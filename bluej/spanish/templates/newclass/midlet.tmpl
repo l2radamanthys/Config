@@ -1,0 +1,60 @@
+/**
+Autor: Ricardo D. Quiroga
+Version: 0.0.0
+Fecha: dia de Mes de Anio
+Descripcion:
+*/
+
+$PKGLINE
+
+import javax.microedition.midlet.MIDlet;
+
+
+public class $CLASSNAME extends MIDlet {
+   /*******************************************************************************
+    Descipcion de la Clase
+    *******************************************************************************/
+    //-------------------- Atributos -------------------------------//
+    
+    
+    //-------------------- Constructores ---------------------------//
+    public $CLASSNAME() {
+    }
+
+    //-------------------- Metodos ---------------------------------//
+   
+    public void startApp() {
+        /**
+        * Called by the AMS to shift the MIDlet to the Active state from
+        * the Paused state. While the MIDlet is Active, the AMS can suspend 
+        * its execution by calling pauseApp().
+        */
+        // Allocate shared resources such as network connections or devices.
+    }
+ 
+    public void pauseApp() {
+        /**
+        * Called by the AMS to shift the MIDlet to the Paused state from
+        * the Active state. While the MIDlet is Paused, the AMS can resume 
+        * its execution by calling startApp().
+        * The AMS may shift the MIDlet from Paused to Active or back any
+        * number of times during its execution.
+        */
+        // Release shared resources allocated in startApp().
+    }
+
+    public void destroyApp(boolean unconditional) {
+        /**
+        * Called by the AMS to terminate execution of the MIDlet.
+        * When this method returns, the MIDlet enters the Destroyed 
+        * state.
+        *
+        * @param unconditional   Whether to destroy the MIDlet. If true the
+        *                        MIDlet will enter the Destroyed state regardless
+        *                        of how this method terminates. If false the MIDlet
+        *                        may throw a MIDletStateChangeException to request
+        *                        that it not be destroyed at this time.
+        */
+        // Release resources acquired in the constructor.
+    }
+}
