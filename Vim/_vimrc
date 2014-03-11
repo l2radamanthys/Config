@@ -2,7 +2,7 @@
 " 
 " Archivo de configuracion de GVim personalizado
 " Autor: Ricardo Daniel Quiroga
-" Ultima Modificacion: 23/08/2013
+" Ultima Modificacion: 11/03/2014
 " Email: l2radamanthys@gmail.com
 " Licencia: GPL3
 
@@ -10,26 +10,27 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set rtp+='~/vimfiles/bundle/vundle/'
-" let path='~/vimfiles/bundle'
 
 set rtp+=$VIM/vimfiles/bundle/vundle/
-" let path='$VIM/vimfiles/bundle'
+" let path='$VIM/vimfiles/bundle'   
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
 
 " Plugins Instalar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'taglist.vim'
 Bundle 'AutoComplPop'
+Bundle 'FindFile'
+
+
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-filetype plugin indent on 
 
 
 " Esquema de Colores
@@ -57,7 +58,7 @@ endif
 hi Folded guibg=Gray5
 set foldcolumn=1
 set foldmethod=indent
-set foldlevel=100
+set foldlevel=100                   " Evita que aparesca plegado cambiar por 1 para plegar todo
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                           " resaltar sintaxis
@@ -70,15 +71,15 @@ set tabstop=4                       " tamaño tabulacion
 retab                               
 set shiftwidth=4                    " identacion tamaño y que sea automatica
 set autoindent 
-set paste                           "desactivar esta entrada soluciona supuestamente el problema de autocomplete de Snipmate
+set paste                           " Desactivar esta entrada soluciona supuestamente el problema de autocomplete de Snipmate
 set ic
 
-set autochdir                       " cambiar el directorio actual al archivo abierto
+set autochdir                       " Cambiar el directorio actual al archivo abierto
 autocmd BufEnter * silent! lcd %:p:h
 
-" funcion normal (no vim normal sino mas conocido) de la tecla 
-" backspace activo osea poder borrar 
+" funcion normal (no vim normal sino mas conocido) de la tecla backspace activo osea poder borrar 
 set backspace=eol,start,indent
+
 " set mouse=v
 set showmode                        " muestra el modo actual de VIM Normal/Edicion/Visor
 set nobackup                        " backup de archivos desactivado
@@ -124,7 +125,7 @@ au GUIEnter * set lines=30 columns=100
 " Configuracion de NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeHighlightCursorline=1
-let NERDTreeStatusline='-- NERD Tree View --'
+let NERDTreeStatusline='-- Ficheros --'
 let NERDTreeIgnore=['\.pyc$','\.back$', '\~$']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
