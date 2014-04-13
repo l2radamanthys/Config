@@ -1,4 +1,4 @@
-- instalar vim desde 0
+- instalar vim desde 0 (no marcar la opcion set vim plugin)
 - instalar git
 - instalar curl
 
