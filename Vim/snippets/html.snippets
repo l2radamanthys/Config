@@ -36,7 +36,7 @@ snippet enter
 snippet command
 	&#x2318;
 # ⌥
-snippet option
+snippet _option
 	&#x2325;
 # ⌦
 snippet delete
@@ -130,7 +130,7 @@ snippet base
 	<base href="${1}" target="${2}"`Close()`>
 snippet r
 	<br`Close()[1:]`>
-snippet div
+snippet _div
 	<div id="${1:name}">
 		${2}
 	</div>
@@ -161,7 +161,7 @@ snippet form
 
 	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
 	</form>
-snippet h1
+snippet _h1
 	<h1 id="${1:heading}">${2:$1}</h1>
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()` />${4}
@@ -181,12 +181,12 @@ snippet select
 	<select name="${1:some_name}" id="${2:$1}">
 		<option value="${3:option}">${4:$3}</option>
 	</select>${5}
-snippet table
+snippet _table
 	<table border="${1:0}">
 		<tr><th>${2:Header}</th></tr>
 		<tr><th>${3:Data}</th></tr>
 	</table>${4}
-snippet textarea
+snippet _textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 
 ########################################
@@ -218,6 +218,11 @@ snippet div
 	<div class="${1}">
 		${2}
 	</div>
+
+snippet section
+	<section>
+		${1}
+	</section>
 
 snippet ul
 	<ul>
