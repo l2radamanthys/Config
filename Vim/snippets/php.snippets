@@ -232,17 +232,17 @@ snippet ph
 # HTML
 ########################################
 snippet css
-    <link rel="stylesheet" type="text/css" href="${1}.css" />
+	<link rel="stylesheet" type="text/css" href="${1}.css" />
 snippet cssd
-    <style type="text/css">
-        ${1}
-    </style>
+	<style type="text/css">
+	${1}
+	</style>
 snippet js
-    <script type="text/javascript" src="${1}.js"></script>
+	<script type="text/javascript" src="${1}.js"></script>
 snippet jsd
-    <script type="text/javascript">
-        ${1}
-    </script>
+	<script type="text/javascript">
+		${1}
+	</script>
 snippet p
 	<p>${1}</p>
 snippet h1
@@ -297,14 +297,14 @@ snippet html_s
 snippet clear
 	<div style="clear:both;"></div>
 snippet label
-    <label>${1}:</label>    
+	<label>${1}:</label>    
 snippet frow
-    <p>
-    <label>${1}:</label>
-    ${2}
-    </p>    
+	<p>
+	<label>${1}:</label>
+	${2}
+	</p>    
 snippet ftext
-    <input type="text" name="${1}" />
+	<input type="text" name="${1}" />
 snippet textarea 
 	<textarea name="${1}" rows="${2}" cols="${3}">
 	</textarea>
@@ -355,46 +355,35 @@ snippet fsubmit
 ########################################
 snippet civ
 	<?=$${1};?>
-
 snippet cif
 	<?=${1};?>
-
 # value="<?=get_value('var')?>"
 snippet cifv
 	value="<?=get_value('${1}');?>"
-
 snippet ciif
 	<? if (${1}): ?>
 		${2}
 	<? endif; ?>
-
 snippet cifor
 	<? foreach($${1} as $${2}): ?>
 		${3}
 	<? endforeach; ?>
-
 snippet cic
 	class ${1} extends CI_Controller {
 		${2}
 	}
-
 snippet cim
 	class ${1}_model extends CI_Model {
 		${2}
 	}
-
 snippet cilm
 	$this->load->model('${1}');
-
 snippet cill
 	$this->load->library('${1}');
-
 snippet cilh
 	$this->load->helper('${1}');
-
 snippet cilv
 	$this->load->view('${1}');
-
 snippet cicon
 	function __construct()
 	{
@@ -410,22 +399,16 @@ snippet cifun
 
 snippet ci_post
 	$this->input->post('${1}');
-
 snippet cifp
-	$this->input->post('${1}');    
-    
+	$this->input->post('${1}');     
 snippet ci_query
 	$this->db->query("${1}");
-
 snippet ci_insert
 	$this->db->insert(${1}, $${2});
-
 snippet ci_update
 	$this->db->where(${1},${2});
 	$this->db->update(${3}, ${4});
-
 snippet ci_row	
 	$query->row_array();
-
 snippet	ci_result
 	$query->result_array();

@@ -138,7 +138,7 @@ let NERDTreeMapOpenInTab='<2-LeftMouse>'
 let g:nerdtree_tabs_open_on_console_startup=0 "no abrir al inicio
 let g:nerdtree_tabs_open_on_gui_startup=0 "no abrir al inicio
 
-let NERDTreeDirArrows=1
+"let NERDTreeDirArrows=1
 
 map <F2> :NERDTreeToggle<CR>
 "map <F4> :NERDTreeTabsToggle<CR>
