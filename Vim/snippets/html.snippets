@@ -222,6 +222,16 @@ snippet div
 	<div class="${1}">
 		${2}
 	</div>
+snippet span
+	<span class="${1}">${2}</span>
+snippet em
+	<em>${1}</em>
+snippet strong
+	<strong>${1}</strong>
+snippet _i
+	<em>${1}</em>
+snippet b
+	<strong>${1}</strong>
 snippet section
 	<section>
 		${1}
@@ -253,11 +263,11 @@ snippet trtd2
 		<td>${1}</td>
 		<td>${2}</td>
 	</tr>
-snippet html_i
+snippet i
 	id="${1}"
-snippet html_c
+snippet c
 	class="${1}"
-snippet html_s
+snippet s
 	style="${1}"
 snippet clear
 	<div style="clear:both;"></div>
@@ -308,6 +318,65 @@ snippet option
 	<option value="${1}">${2}</option>
 snippet fsubmit
 	<input type="submit" value="${1:Registrar}" class="${2}">
-
-
-
+# HTML5 Tags
+snippet header
+	<header>
+		${1}
+	</header>
+snippet nav
+	<nav>
+		${1}
+	</nav>
+snippet aside
+	<aside>
+		${1}
+	</aside>
+snippet section
+	<section>
+		${1}
+	</section>
+snippet article
+	<article>
+		${1}
+	</article>
+snippet footer
+	<footer>
+		${1}
+	</footer>	
+#####################
+# Django
+#####################
+snippet djext
+	{% extends "${1}" %}
+snippet djload
+	{% load ${1} %}
+snippet djv
+	{{ ${1} }}
+snippet djb
+	{% block ${1} %}
+		${2}
+	{% endblock %}
+snippet djfor
+	{% for ${1} in ${2} %}
+		${3}
+	{% endfor %}
+snippet djif
+	{% if ${1} %}
+		${2}
+	{% endif %}
+snippet djifelse
+	{% if ${1} %}
+		${2}
+	{% else %}
+		${3}
+	{% endif %}
+snippet djelse
+	{% else %}
+snippet djelif	
+	{% elif ${1} %}
+snippet djc
+	{# ${1} #}
+snippet djesc
+	{% autoescape on %}
+		${1}
+	{% endautoescape %}
