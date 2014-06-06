@@ -192,151 +192,120 @@ snippet _textarea
 ########################################
 # Custom Snippets
 ########################################
-
+snippet css
+    <link rel="stylesheet" type="text/css" href="${1}.css" />
+snippet cssd
+    <style type="text/css">
+        ${1}
+    </style>
+snippet js
+    <script type="text/javascript" src="${1}.js"></script>
+snippet jsd
+    <script type="text/javascript">
+        ${1}
+    </script>
 snippet p
 	<p>${1}</p>
-
 snippet h1
 	<h1>${1}</h1>
-
 snippet h2
 	<h2>${1}</h2>
-
 snippet h3
 	<h3>${1}</h3>
-
 snippet br
 	<br />
-
 snippet li
 	<li>${1}</li>
-
 snippet a
 	<a href="${1}" title="">${2}</a>
-
 snippet div
 	<div class="${1}">
 		${2}
 	</div>
-
 snippet section
 	<section>
 		${1}
 	</section>
-
 snippet ul
 	<ul>
 		<li>${1}</li>
 	</ul>
-
 snippet lia
 	<li><a href="${1}" title="">${2}</a></li>
-
 snippet table 
 	<table>
 		${1}
 	</table>
-
 snippet th
 	<th>${1}<th>		
-
 snippet td
 	<td>${1}</td>
-
 snippet tr
 	<tr>
 		${1}
 	</tr>
-
 snippet trtd	
 	<tr>
 		<td>${1}</td>
 	</tr>
-
 snippet trtd2	
 	<tr>
 		<td>${1}</td>
 		<td>${2}</td>
 	</tr>
-
 snippet html_i
 	id="${1}"
-
 snippet html_c
 	class="${1}"
-
 snippet html_s
 	style="${1}"
-
 snippet clear
 	<div style="clear:both;"></div>
-
 snippet ftext
 	<input type="text" name="${1}" />
-
 snippet textarea 
 	<textarea name="${1}" rows="${2}" cols="${3}">
 	</textarea>
-
 snippet fcolor
 	<input type="color" name="${1}"/>
-
 snippet fdate
 	<input type="date" name="${1}"/>
-
 snippet fdatetime
 	<input type="datetime" name="${1}"/>
-
 snippet fdatetimelocal
 	<input type="datetime-local" name="${1}"/>
-
 snippet femail
 	<input type="email" name="${1}"/>
-
 snippet fmonth
 	<input type="month" name="${1}"/>
-
 snippet fnumber
 	<input type="number" name="${1}"/>
-
 snippet frange
 	<input type="range" name="${1}" min="${2}" max="${3}" />
-
 snippet fsearch
 	<input type="search" name="${1}"/>
-
 snippet ftel
 	<input type="tel" name="${1}"/>
-
 snippet ftime
 	<input type="time" name="${1}"/>
-
 snippet furl
 	<input type="url" name="${1}"/>
-
 snippet fweek
 	<input type="week" name="${1}"/>
-
 snippet fradio
 	<input type="radio" name="${1}" />
-
 snippet fcradio
 	<input type="radio" name="${1}" checked />
-
 snippet fcheckbox
 	<input type="checkbox" name="${1}" />
-
 snippet fccheckbox
 	<input type="checkbox" name="${1}" checked />
-
 snippet fselect
 	<select name="${1}" >
 		${3}
 	</select>
-
 snippet option
 	<option value="${1}">${2}</option>
-
 snippet fsubmit
 	<input type="submit" value="${1:Registrar}" class="${2}">
 
