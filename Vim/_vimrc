@@ -23,11 +23,13 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs' 
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 Bundle 'msanders/snipmate.vim'
 Bundle 'taglist.vim'
 Bundle 'AutoComplPop'
 Bundle 'FindFile'
-
+Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on
 
@@ -166,7 +168,7 @@ set statusline +=\ Bufer:\ %n
 set statusline +=%=
 set statusline +=\ Linea:\ %04l\ de:\ %04L\ \ |
 
-" Configuracion especial de Sintaxis para Python
+" Configuracion especial de Resaltado de Sintaxis para Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syn sync fromstart                      "problemas de resaltado de sintaxis comunes
 
@@ -175,3 +177,20 @@ let python_highlight_all=1              " Resaltado de Sintaxis para todo
 
 map <F5> :!python %<CR>
 
+" Configuracion de Syntastic 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_php_checkers = ['php']
+let g:syntastic_python_checkers = ['python']
+"simbolo marcar error
+let g:syntastic_error_symbol = '!e'
+let g:syntastic_warning_symbol = '!w'
+"salta automaticamente al primer error
+"let g:syntastic_auto_jump = 1
+
+"map <F6> :SyntasticReset<CR>
+map <F7> :SyntasticToggleMode<CR>
+map <F8> :Errors<CR>
+
+" Configuracion de EasyMotion (una verga no se como usarlo)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EasyMotion_leader_key = ',,' 
