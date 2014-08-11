@@ -23,7 +23,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs' 
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic' rompe las bolas con latex
 Bundle 'msanders/snipmate.vim'
 Bundle 'taglist.vim'
 Bundle 'AutoComplPop'
@@ -132,7 +132,7 @@ au GUIEnter * set lines=30 columns=100
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeHighlightCursorline=1
 let NERDTreeStatusline='-- Ficheros --'
-let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$']
+let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
 let NERDTreeMapOpenInTab='<2-LeftMouse>'
