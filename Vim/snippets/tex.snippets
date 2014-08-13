@@ -1,5 +1,5 @@
 # \begin{}...\end{}
-snippet begin
+snippet beginend
 	\begin{${1:env}}
 		${2}
 	\end{$1}
@@ -130,5 +130,53 @@ snippet ??
 	?`
 snippet !!
 	!`
-snipet ""
+snipet com
 	``${1}""
+snippet ul
+	\begin{Itemize}
+		${1}
+	\end{itemize}
+snippet li
+	\item ${1}
+snippet begin
+	\begin{${1}}
+		${2}
+snippet end
+	\end{${1}}
+	${2}
+snippet note
+	\footnote{${1}}
+#citar bibliografia
+snippet ref
+	\cite{${1}}
+snippet bold
+	\textbf{${1}}
+snippet em
+	\textif{${1}}
+snippet upper
+	\texttt{${1}}
+#bibligrafia
+snippet bib
+	\bibitem{${1}} \textsv{${1}} \textit{${2}} ${3}
+#tamaños
+snippet h1
+	\Huge
+snippet h2
+	\huge
+snippet h3s
+	\LARGE
+snippet h3m
+	\Large
+snippet h3l
+	\large
+snippet ps
+	\normalsize
+snippet h4
+	\small
+snippet h5
+	\scriptsize
+snippet h6
+	\tiny
+snippet br
+	\\[0.1cm${1}]
+
