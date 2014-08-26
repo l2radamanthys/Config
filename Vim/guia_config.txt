@@ -52,3 +52,33 @@ OTROS
 
 /colors 		#theme rDark
 /snippets		#snippets personalizados
+
+
+===================================================================
+
+Instalacion en Linux (Debian)
+
+clonar
+------
+
+$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+instalar ctags
+
+$ sudo apt-get install ctags
+
+situarse en ~/. (HOME)
+
+copiar el archivo .vimrc
+
+abrir vim y ejecutar :BundleInstall con eso instalara el resto de los paquetes
+
+dentro de la carpeta ~/.vim crear la carpeta colors y copiar el archivo 
+rDark.vim (ubicado en la carpeta colors) dentro de ella.
+
+
+
+
+
+
+
