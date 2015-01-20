@@ -1,0 +1,3 @@
+pcmanfm --desktop &
+xfce4-power-manager-settings &
+tint2restart &
