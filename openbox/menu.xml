@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.5/menu">
+	<menu execute="/usr/bin/openbox-menu lxde-applications.menu" id="desktop-app-menu" label="Aplicativos"/>
+	<menu id="root-menu" label="Openbox 3.5">
+		<separator label="Menu"/>
+		<menu id="desktop-app-menu"/>
+		<separator/>
+		<item label="Ejecutar">
+			<action name="Execute">
+				<execute>
+                    gmrun
+                </execute>
+			</action>
+		</item>
+		<item label="Explorador Archivos">
+			<action name="Execute">
+				<execute>
+                    pcmanfm
+                </execute>
+			</action>
+		</item>
+		<item label="Iceweasel">
+			<action name="Execute">
+				<execute>
+                    iceweasel
+                </execute>
+			</action>
+		</item>
+		<item label="LXTerm">
+			<action name="Execute">
+				<execute>
+                    lxterminal
+                </execute>
+			</action>
+		</item>
+		<item label="XTerm">
+			<action name="Execute">
+				<execute>
+                    xterm
+                </execute>
+			</action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+                    x-terminal-emulator
+                </execute>
+			</action>
+		</item>
+		<separator label=""/>
+		<menu id="development" label="Desarrollo">
+			<item label="Geany">
+				<action name="Execute">
+					<execute>
+                        geany
+                    </execute>
+				</action>
+			</item>
+			<item label="GVim">
+				<action name="Execute">
+					<execute>
+                        gvim
+                    </execute>
+				</action>
+			</item>
+        </menu>
+        <menu id="tools" label="Herramientas">
+			<item label="Pasword Safe">
+				<action name="Execute">
+					<execute>
+                        pwsafe
+                    </execute>
+				</action>
+            </item>
+
+			<item label="Dia">
+				<action name="Execute">
+					<execute>
+                        dia
+                    </execute>
+				</action>
+            </item>
+
+
+        </menu>    
+		<menu id="settings" label="Configuraciones">
+			<menu id="conkyconfig" label="Conky">
+				<item label="Configuracion">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.conkyrc
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="dmenuconfig" label="dmenu">
+				<item label="Edit start-up script">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/dmenu/dmenu-bind.sh
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="gmrunconfig" label="gmrun">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.gmrunrc
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="obConfig" label="Openbox">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/openbox/menu.xml
+                        </execute>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/openbox/rc.xml
+                        </execute>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/openbox/autostart
+                        </execute>
+					</action>
+				</item>
+				<item label="GUI Menu Editor">
+					<action name="Execute">
+						<execute>
+                            obmenu
+                        </execute>
+					</action>
+				</item>
+				<item label="GUI Applications Settings Editor">
+					<action name="Execute">
+						<execute>
+                            obapps
+                        </execute>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+                            obconf
+                        </execute>
+					</action>
+				</item>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu id="terminatorconfig" label="Terminal">
+				<item label="Configurar Terminator">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/terminator/config
+                        </execute>
+					</action>
+				</item>
+				<item label="Modificar .zshrc">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.zshrc
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="tint2config" label="tint2">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+                            gvim ~/.config/tint2/tint2rc
+                        </execute>
+					</action>
+				</item>
+				<item label="Restart tint2">
+					<action name="Execute">
+						<execute>
+                            tint2restart
+                        </execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>
+                            terminator --command=&quot;man tint2&quot;
+                        </execute>
+					</action>
+				</item>
+				<item label="Online Help">
+					<action name="Execute">
+						<execute>
+                            x-www-browser http://code.google.com/p/tint2/wiki/Welcome
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="DisplaySettings" label="Display Settings">
+				<item label="Adjust with grandr">
+					<action name="Execute">
+						<execute>
+                            grandr
+                        </execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man xrandr">
+					<action name="Execute">
+						<execute>
+                            terminator --command=&quot;man xrandr&quot;
+                        </execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Modificar Aplicaciones por Defecto">
+				<action name="Execute">
+					<execute>
+                        terminator --command=&quot;sudo update-alternatives --all&quot;
+                    </execute>
+				</action>
+			</item>
+			<item label="GUI Theme Configuracion">
+				<action name="Execute">
+					<execute>
+                        lxappearance
+                    </execute>
+				</action>
+			</item>
+			<item label="Configuracion de Energia">
+				<action name="Execute">
+					<execute>
+                        xfce4-power-manager-settings
+                    </execute>
+				</action>
+			</item>
+			<item label="SalvaPantallas">
+				<action name="Execute">
+					<execute>
+                        xscreensaver-demo
+                    </execute>
+				</action>
+			</item>
+			<item label="Fondo de Pantalla">
+				<action name="Execute">
+					<execute>
+                        nitrogen ~/Imagens/
+                    </execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="Sistema">
+			<item label="GParted">
+				<action name="Execute">
+					<execute>
+                        gksudo gparted
+                    </execute>
+				</action>
+			</item>
+			<item label="User Login Settings">
+				<action name="Execute">
+					<execute>
+                        gksudo gdmsetup
+                    </execute>
+				</action>
+			</item>
+			<item label="Gestor de Paquete">
+				<action name="Execute">
+					<execute>
+                        gksudo synaptic
+                    </execute>
+				</action>
+			</item>
+		</menu>
+		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
+        <separator label=""/>
+        
+			<item label="Apagar">
+				<action name="Execute">
+                    <execute>
+                        python /home/wyrven/workspace/scripts/logout.py
+                    </execute>
+				</action>
+			</item>
+	</menu>
+</openbox_menu>
