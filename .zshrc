@@ -51,17 +51,18 @@ alias t="ls -rt1a"
 alias s="ls -asrS1"
 alias lc="ls|wc -l"
 alias d='df -h'
+alias p='pwd'
 #alias mp='mplayer'
 #alias mps='mplayer -nosound'
 #alias atanks='atanks -d 16 --nosound'
 
 
 # Alias de debian
-alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
-alias menu='cat /etc/X11/WindowMaker/menu.hook'
+#alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
+#alias menu='cat /etc/X11/WindowMaker/menu.hook'
 
 # Alias para los editores
-alias joe='joe -asis'
+#alias joe='joe -asis'
 
 # Alias para colores
 alias ls='ls --color=auto'
@@ -106,13 +107,14 @@ alias ipy='ipython'  #ipython interprete
 #alias py26='python2.6'
 alias py27='python2.7'
 #alias py3k='python3.1'
-alias pydb='winpydb' #debuguer de python
+#alias pydb='winpydb' #debuguer de python
 
-alias vim='gvim' #mmm ni lo uso, no soy tan fana
+alias vi='vim'
+alias vim='gvim' 
 alias ge='gedit'
 alias suge='sudo gedit'
-#alias spe='./home/wyrven/script/spe'
 alias edit='geany' #mi editor por defecto.. al menos yo uso siempre este
+#alias spe='./home/wyrven/script/spe'
 #alias eric='eric4' 
 #alias pybean='/usr/local/netbeans-6.7/bin/netbeans'
 #alias netbeans6.7='/usr/local/netbeans-6.7/bin/netbeans'
@@ -141,6 +143,7 @@ alias proydir='cd /home/wyrven/workspace; pwd;'
 alias pdir='cd /home/wyrven/workspace; pwd;'
 alias pydir='cd /home/wyrven/workspace/Python; pwd;'
 alias wdir='cd /home/wyrven/workspace/www; pwd;'
+alias home='cd /home/wyrven; pwd'
 
 #lp_solver proy dir
 #alias lpdir='cd /home/wyrven/Proyectos/Lp; pwd;'
@@ -149,25 +152,38 @@ alias wdir='cd /home/wyrven/workspace/www; pwd;'
 #python proy dir
 #alias pythondir='cd /home/wyrven/Proyectos/Python; pwd; ls -l'
 #alias pydir='cd /home/wyrven/Proyectos/Python; pwd; ls -l'
+
 #PyGame dir
 #alias pygamedir='cd /home/wyrven/Proyectos/Python/PyGame; pwd; ls -l'
 #alias pygdir='cd /home/wyrven/Proyectos/Python/PyGame; pwd'
+
 #Django dir
-alias djangodir='cd /home/wyrven/workspace/Python/Django; pwd'
-alias djdir='cd /home/wyrven/workspace/Python/Django; pwd'
+#alias djangodir='cd /home/wyrven/workspace/Python/Django; pwd'
+#alias djdir='cd /home/wyrven/workspace/Python/Django; pwd'
+
+#virtual env configuta
+alias env-init='source /home/wyrven/virtual_env/env1/bin/activate' 
+alias env-stop='deactivate'
 
 #alias cursos='nautilus /media/Radamanthys/Cursos; pwd'
 #-------------otros-------------------
 alias root='su' #cambia al usuario root
 alias postgres='su postgres'  #cambia al usuario postgres
 alias supsql='su postgres'
-alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
-alias pkglist='sudo gedit /etc/apt/sources.list'
+alias sqlite-admin='sqlitebrowser'
+#alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
+#alias pkglist='sudo gedit /etc/apt/sources.list'
+alias apache-init='sudo service apache2 start'
+alias apache-stop='sudo service apache2 stop'
+alias apache-rest='sudo service apache2 restart' 
+alias mysql-init='sudo service mysql start'
+alias mysql-stop='sudo service mysql stop'
+alias mysql-rest='sudo service mysql restart'
 
-alias reiniciar='sudo reboot'
-alias apagar='sudo halt'
+alias serv-conf='sudo sysv-rc-conf'
 
-#alias menkai='nautilus "/media/Radamanthys/Wyrven Files/Archivos/Otros/Radamanthys/back/Nueva carpeta (4)"; clear'
+alias reiniciar='sudo reboot -r now'
+alias apagar='sudo shutdown -r now'
 
 ############################### MEGAPROMPT ##############################
 function precmd {
