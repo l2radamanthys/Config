@@ -2,7 +2,7 @@
 " 
 " Archivo de configuracion de GVim personalizado
 " Autor: Ricardo Daniel Quiroga
-" Ultima Modificacion: 18/02/2015
+" Ultima Modificacion: 11/03/2014
 " Email: l2radamanthys@gmail.com
 " Licencia: GPL3
 
@@ -30,12 +30,6 @@ Bundle 'AutoComplPop'
 Bundle 'FindFile'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
-" New
-Bundle 'majutsushi/tagbar'
-" Bundle 'bling/vim-airline'
-Bundle 'lilydjwg/colorizer' 
-" Bundle 'Lokaltog/vim-powerline'
-
 
 filetype plugin indent on
 
@@ -141,8 +135,7 @@ let NERDTreeStatusline='-- Ficheros --'
 let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
-"let NERDTreeMapOpenInTab='<LeftMouse>'
-let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeMapOpenInTab='<2-LeftMouse>'
 
 let g:nerdtree_tabs_open_on_console_startup=0 "no abrir al inicio
 let g:nerdtree_tabs_open_on_gui_startup=0 "no abrir al inicio
