@@ -162,7 +162,8 @@ alias home='cd /home/wyrven; pwd'
 #alias djdir='cd /home/wyrven/workspace/Python/Django; pwd'
 
 #virtual env configuta
-alias env-init='source /home/wyrven/virtual_env/env1/bin/activate' 
+alias env1-init='source /home/wyrven/Workspace/virtualenv/env1/bin/activate'
+alias sgcm-env-init='source /home/wyrven/Workspace/virtualenv/sgcm-env/bin/activate' 
 alias env-stop='deactivate'
 
 #alias cursos='nautilus /media/Radamanthys/Cursos; pwd'

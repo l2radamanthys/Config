@@ -162,13 +162,13 @@
 				</item>
 			</menu>
 			<menu id="terminatorconfig" label="Terminal">
-				<item label="Configurar Terminator">
+				<!-- item label="Configurar Terminator">
 					<action name="Execute">
 						<execute>
                             gvim ~/.config/terminator/config
                         </execute>
 					</action>
-				</item>
+				</item -->
 				<item label="Modificar .zshrc">
 					<action name="Execute">
 						<execute>
@@ -196,7 +196,7 @@
 				<item label="man page">
 					<action name="Execute">
 						<execute>
-                            terminator --command=&quot;man tint2&quot;
+                            lxterminal --command=&quot;man tint2&quot;
                         </execute>
 					</action>
 				</item>
@@ -220,15 +220,15 @@
 				<item label="man xrandr">
 					<action name="Execute">
 						<execute>
-                            terminator --command=&quot;man xrandr&quot;
+                            lxterminal --command=&quot;man xrandr&quot;
                         </execute>
 					</action>
 				</item>
 			</menu>
-			<item label="Modificar Aplicaciones por Defecto">
+			<item label="Modificlar Aplicaciones por Defecto">
 				<action name="Execute">
 					<execute>
-                        terminator --command=&quot;sudo update-alternatives --all&quot;
+                        lxterminal --command=&quot;sudo update-alternatives --all&quot;
                     </execute>
 				</action>
 			</item>
@@ -285,12 +285,11 @@
 			</item>
 		</menu>
 		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
-        <separator label=""/>
-        
+        	<separator label=""/>        
 			<item label="Apagar">
 				<action name="Execute">
                     <execute>
-                        python /home/wyrven/workspace/scripts/logout.py
+                        python /home/wyrven/bin/logout.py
                     </execute>
 				</action>
 			</item>
