@@ -1,0 +1,3 @@
+INSTALL ON 
+
+%USER%APPDATA/ROAMING/SublimeText
