@@ -1,10 +1,13 @@
 - instalar vim desde 0 (no marcar la opcion set vim plugin)
-- instalar git
-- instalar curl
 
+- instalar git
 - agregar la ruta bin de git all PATH del sistema
 
-- crear un cmd llamado curl.cmd con
+- instalar curl
+en Windows 
+	descargar desde: https://curl.haxx.se/download.html
+
+- crear un cmd llamado curl.cmd (posiblemente este ubicado en esta carpeta) con
 
 #####################
 @rem Do not use "echo off" to not affect any child calls.
@@ -58,17 +61,18 @@ OTROS
 
 Instalacion en Linux (Debian)
 
+-- Instalar curl
+$ sudo apt-get install curl 
+
 clonar
 ------
-
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-instalar ctags
+-- instalar ctags
 
 $ sudo apt-get install ctags
 
-situarse en ~/. (HOME)
-
+-- situarse en ~/. (HOME)
 copiar el archivo .vimrc
 
 abrir vim y ejecutar :BundleInstall con eso instalara el resto de los paquetes
