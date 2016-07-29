@@ -21,6 +21,9 @@ Bundle 'gmarik/vundle'
 " Navegador de Ficheros
 Bundle 'scrooloose/nerdtree'
 
+" Mantiene el nerdtree idependiente de la pestaña
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " Listado de Etiquetas
 Bundle 'taglist.vim' 
 
@@ -28,12 +31,22 @@ Bundle 'taglist.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'  
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
-"Bundle 'honza/vim-snippets' " Paquete de snippets
-
 Plugin 'honza/vim-snippets'
+
+" Autocomeplete
+Plugin 'AutoComplPop'
 
 " C# suport
 Plugin 'OrangeT/vim-csharp'
+
+" Comentar
+Plugin 'scrooloose/nerdcommenter'
+
+" TagBarr
+Bundle 'majutsushi/tagbar'
+
+" Colores
+Bundle 'lilydjwg/colorizer' 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion General
@@ -99,7 +112,12 @@ imap <C-s> <Esc>:w<CR>i
 map <F2> :NERDTreeToggle<CR>
 "map <F4> :NERDTreeTabsToggle<CR>
 map <F3> :TlistToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
+nmap _nt tabn
+nmap _pt tabp
+nmap _ft tabfirst
+nmap _lt tablast
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Opciones de Plegado
@@ -115,7 +133,7 @@ set foldlevel=100                   " Evita que aparesca plegado cambiar por 1 p
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Configuracion de NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeHighlightCursorline=1
 let NERDTreeStatusline='-- Ficheros --'
 let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc']
@@ -123,13 +141,15 @@ let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
 "let NERDTreeMapOpenInTab='<LeftMouse>'
 let NERDTreeMapOpenInTab='<ENTER>'
-let g:nerdtree_tabs_open_on_console_startup=0 "no abrir al inicio
-let g:nerdtree_tabs_open_on_gui_startup=0 "no abrir al inicio
 "let NERDTreeDirArrows=1
 
+" Configuracion NerdTree tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:nerdtree_tabs_open_on_gui_startup=0 "no abrir al inicio
+let g:nerdtree_tabs_open_on_console_startup=0 "no abrir al inicio
 
 " Configuracion de TagList
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let Tlist_Auto_Open=1
 let Tlist_Sort_Type= 'name'
 let Tlist_Compact_Format=1
