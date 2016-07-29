@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VINFILE CONFIGURATION
 " Autor: Ricardo Daniel Quiroga
-" Fecha: 29/07/2016  
+" Fecha: 29/07/2016
 " OS: Windows
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -12,7 +12,7 @@ filetype off                  " required
 set rtp+=$VIM/vimfiles/bundle/vundle/
 call vundle#rc()
 
-filetype plugin indent on 
+filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " List of Installed Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,10 +25,10 @@ Bundle 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
 " Listado de Etiquetas
-Bundle 'taglist.vim' 
+Bundle 'taglist.vim'
 
 " Snipmate Package
-Bundle 'MarcWeber/vim-addon-mw-utils'  
+Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
@@ -46,7 +46,7 @@ Plugin 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
 
 " Colores
-Bundle 'lilydjwg/colorizer' 
+Bundle 'lilydjwg/colorizer'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion General
@@ -54,15 +54,18 @@ Bundle 'lilydjwg/colorizer'
 syntax on                           " resaltar sintaxis
 set anti enc=utf-8
 "set guifont=Source\ Code\ Pro\ 10      " Set font/size in Linux
-set guifont=Source_Code_Pro:h11         " Set font/size in Windows    
+set guifont=Source_Code_Pro:h11         " Set font/size in Windows
 set helplang=es                         " lenguaje de la Ayuda
 set number                              " mostrar numero de linea
 set fileencoding=utf-8                  " codificacion de texto
 set expandtab                           " Espacios en ves de tabulaciones
 set tabstop=4                           " tamaño tabulacion
-retab                               
 set shiftwidth=4                        " identacion tamaño y que sea automatica
-set backspace=eol,start,indent          " funcion normal (no vim normal sino mas conocido) de la tecla backspace activo osea poder borrar 
+retab
+set autoindent
+set paste
+set ic
+set backspace=eol,start,indent          " funcion normal (no vim normal sino mas conocido) de la tecla backspace activo osea poder borrar
 
 set showmode                            " muestra el modo actual
 set nobackup                            " desactiva los backup
@@ -85,7 +88,7 @@ set hlsearch
 set ignorecase                          " ignora mayusculas y minusculas en las busquedas
 set nohlsearch                          " no resaltar los resultados de la busqueda esto marea
 
-set guitablabel=\[%N\]\ %t\ %M 
+set guitablabel=\[%N\]\ %t\ %M
 
 
 au GUIEnter * set lines=30 columns=100  " Configura el tamaño inicial de la ventana al abrir vim
@@ -96,7 +99,7 @@ au GUIEnter * set lines=30 columns=100  " Configura el tamaño inicial de la vent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " El Esquema de colores solo se cambiara si esta en modo GUI
 if has('gui_running')
-    colorscheme rDark 
+    colorscheme rDark
 else
     colorscheme Default
 endif
@@ -166,7 +169,7 @@ hi StatusLine guibg=gray ctermbg=gray
 
 set laststatus=2                         " barra de estado siempre visible
 set statusline =Archivo:\ %t
-set statusline +=\ T:\ %y\ LB:\ [%{&ff}] " tipo y codificacion 
+set statusline +=\ T:\ %y\ LB:\ [%{&ff}] " tipo y codificacion
 set statusline +=\ Bufer:\ %n
 " right align
 set statusline +=%=

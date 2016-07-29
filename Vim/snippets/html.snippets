@@ -291,10 +291,10 @@ snippet dialog
 	<dialog>
 		${0}
 	</dialog>
-# snippet div
-#	<div>
-#		${0}
-#	</div>
+snippet div
+	<div>
+		${0}
+	</div>
 snippet div.
 	<div class="${1}">
 		${0}
@@ -883,35 +883,142 @@ snippet video
 	<video src="${1} height="${2}" width="${3}" preload="${5:none}" autoplay="${6:autoplay}>${7}</video>
 snippet wbr
 	<wbr />
-snippet div
-	<div>${0}</div>
+
+#custom
+snippet s
+	style="${0}"
 snippet c
 	class="${0}"
 snippet class
 	class="${0}"
 snippet id
 	id="${0}"
+snippet click
+	onclick="${0}"
+snippet change
+	onchange="${0}"
 
 #font awersome icon
 snippet fa 
 	<i class="fa fa-${0}" aria-hidden="true"></i>
 
 #bootstrap
-snippet row
+snippet bscol
+	<div class="col-${0}">
+	</div>
+
+snippet bsrow
 	<div class="row">
 		${0}
+	</div>
+
+snippet bstable
+	<table class="table">
+		<thead>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+snippet bsalert
+	<div class="alert alert-{0:primary|success|default|danger|warning}">
+		${1}
+	</div>
+
+snippet bspanel
+	<div class="panel panel-{0:primary|success|default|danger|warning}">
+		<div class="panel-heading">
+			${1}
+		</div>
+		<div class="panel-footer">
+			${2}
+		</div>
+	</div>
+
+snippet bslist
+	<ul class="list-group">
+		${0:bslitem}
+	</ul>
+
+snippet bslitem
+	<li class="list-group-item">${0}</li>
+
+snippet bsaitem
+	<a href="${0}" class="list-group-item">${1}</a>
+
+snippet bsmodal
+	<div id="${0:myModal}" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content ${1:modal-lg}">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>${2}</h4>
+				</div>
+				<div class="modal-body" style="background-color: #FFF">			
+					${3}
+				</div>
+			</div>
+		</div>
+	</div>
+
+snippet bsbutton
+	<button type="button" class="btn btn-{0:primary|success|default|danger}">${1}</button>
+
+snippet bsbtngroup
+	<div class="btn-group">
+		${0}
 	</div>	
-snippet c:xs
+
+snippet bsinput
+	<div class="form-group">
+		<label for="">${0}</label>
+		<input type="text" class="form-control" id="${1}">
+	</div>
+
+snippet bsselect
+	<div class="form-group">
+		<label for="">${0}</label>
+		<select id="${1}" class="form-control">
+		</select>
+	</div>
+
+snippet bstextarea
+	<div class="form-group">
+		<label for="">${0}</label>
+		<textarea class="form-control"></textarea>
+	</div>
+
+snippet bsradio
+	<div class="radio">	
+		<label for="${1}"><input type="radio" name="${0}"></label>	
+	</div>
+
+snippet bscheckbox
+	<div class="checkbox">
+		<label for="${1}"><input type="checkbox" name="${0}"></label>	
+	</div>
+
+snippet bsbadget
+	<span class="badget">${0}</span>	
+
+snippet bslabel
+	<span class="label label-${0:default|primary|success|danger|warning|info}">${1}</span>	
+
+snippet bsxs
 	col-xs-${0}
-snippet c:sm
+snippet bssm
 	col-sm-${0}
-snippet c:md
+snippet bsmd
 	col-md-${0}
-snippet c:lg
+snippet bslg
 	col-lg-${0}
-snippet c:tc
+snippet bstc
 	text-center
-snippet c:tl
+snippet bstl
 	text-left
-snippet c:tr
+snippet bstr
 	text-right
+snippet bsa 
+	active
+snippet bsd
+	disabled
