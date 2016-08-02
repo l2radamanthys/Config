@@ -21,7 +21,7 @@ Bundle 'gmarik/vundle'
 " Navegador de Ficheros
 Bundle 'scrooloose/nerdtree'
 
-" Mantiene el nerdtree idependiente de la pestaña
+" Mantiene el nerdtree idependiente de la pesta?
 Plugin 'jistr/vim-nerdtree-tabs'
 
 " Listado de Etiquetas
@@ -48,6 +48,9 @@ Bundle 'majutsushi/tagbar'
 " Colores
 Bundle 'lilydjwg/colorizer'
 
+" Enhanse JS sintax
+Plugin 'jelera/vim-javascript-syntax'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -59,8 +62,8 @@ set helplang=es                         " lenguaje de la Ayuda
 set number                              " mostrar numero de linea
 set fileencoding=utf-8                  " codificacion de texto
 set expandtab                           " Espacios en ves de tabulaciones
-set tabstop=4                           " tamaño tabulacion
-set shiftwidth=4                        " identacion tamaño y que sea automatica
+set tabstop=4                           " tama? tabulacion
+set shiftwidth=4                        " identacion tama? y que sea automatica
 retab
 set autoindent
 set paste
@@ -91,7 +94,7 @@ set nohlsearch                          " no resaltar los resultados de la busqu
 set guitablabel=\[%N\]\ %t\ %M
 
 
-au GUIEnter * set lines=30 columns=100  " Configura el tamaño inicial de la ventana al abrir vim
+au GUIEnter * set lines=30 columns=100  " Configura el tama? inicial de la ventana al abrir vim
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
