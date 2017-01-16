@@ -1,0 +1,24 @@
+{
+    "typescript.check.workspaceVersion": false,
+    "typescript.check.tscVersion": false,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Source Code Pro, Consolas, 'Courier New', monospace",
+    "editor.renderWhitespace": "all",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "*.bak":true,
+        "*.map": true
+    },
+    "editor.wrappingColumn": -1,
+    "editor.rulers": [80],
+    "editor.detectIndentation": false,
+    "editor.renderLineHighlight": "line",
+    "git.enabled": false
+}
+
+
+ 

@@ -51,6 +51,9 @@ Bundle 'lilydjwg/colorizer'
 " Enhanse JS sintax
 Plugin 'jelera/vim-javascript-syntax'
 
+" Typescript sintax
+Plugin 'leafgarland/typescript-vim'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,12 +145,13 @@ set foldlevel=100                   " Evita que aparesca plegado cambiar por 1 p
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeHighlightCursorline=1
 let NERDTreeStatusline='-- Ficheros --'
-let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc']
+let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc', '\.js.map']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
 "let NERDTreeMapOpenInTab='<LeftMouse>'
 let NERDTreeMapOpenInTab='<ENTER>'
 "let NERDTreeDirArrows=1
+let g:netrw_sort_sequence='\.c$,\.h$,*'
 
 " Configuracion NerdTree tabs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -178,3 +182,11 @@ set statusline +=\ Bufer:\ %n
 set statusline +=%=
 set statusline +=\ Linea:\ %04l\ de:\ %04L\ \ |
 
+""""""""""""""""""""""""""""""""""""""""
+" Typescript configuracion
+""""""""""""""""""""""""""""""""""""""""
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
