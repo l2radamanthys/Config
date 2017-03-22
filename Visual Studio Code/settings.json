@@ -13,11 +13,18 @@
         "*.bak":true,
         "*.map": true
     },
-    "editor.wrappingColumn": -1,
+    "editor.wordWrap": -1,
     "editor.rulers": [80],
     "editor.detectIndentation": false,
     "editor.renderLineHighlight": "line",
-    "git.enabled": false
+    "git.enabled": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "enable_typescript_language_service": false,
+    "files.associations": {
+        "*.Master": "html"
+    },
+    //"tslint.enable": false,
+    "workbench.iconTheme": "vscode-great-icons"
 }
 
 
