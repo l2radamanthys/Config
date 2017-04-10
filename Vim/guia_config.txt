@@ -7,6 +7,11 @@
 en Windows 
 	descargar desde: https://curl.haxx.se/download.html
 
+- Instalar Ctags
+Windows
+	descargar desde http://ctags.sourceforge.net/ y agregarlo al path
+
+
 - crear un cmd llamado curl.cmd (posiblemente este ubicado en esta carpeta) con
 
 #####################
@@ -30,7 +35,8 @@ en Windows
 
 >> git clone https://github.com/gmarik/vundle.git vimfiles/bundle/vundle
 
-agregar la siguiente conf al _vimrc o usar el personalizado
+agregar la siguiente conf al _vimrc o usar el personalizado, colocarlo en
+la carpeta principal del usuario %USERPROFILE%
 
 #############
 set nocompatible              " be iMproved, required

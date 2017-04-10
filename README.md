@@ -1,11 +1,9 @@
-Config
-======
+# Config
 Comfiguracion de Editores y utilidades varias
 
 
 
-Editores
-========
+## Editores
 - NetBeans
 - Geany
 - Notepad++
