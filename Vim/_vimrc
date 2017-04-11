@@ -105,7 +105,7 @@ au GUIEnter * set lines=30 columns=100  " Configura el tama? inicial de la venta
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " El Esquema de colores solo se cambiara si esta en modo GUI
 if has('gui_running')
-    colorscheme rDark
+    colorscheme rDark.1.1
 else
     colorscheme Default
 endif
