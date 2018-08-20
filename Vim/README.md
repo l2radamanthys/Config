@@ -86,4 +86,4 @@ Abrir vim y en modo visualizacion presionar **":"** y escribir
 
 Opcionalmente copiar las carpetas `/colors` y `/snippets` en el directorio `~/.vim`. 
 
-cp -fr ~/Workspace/Config/Vim/colors ~/.vim
+    cp -fr ~/Workspace/Config/Vim/colors ~/.vim
