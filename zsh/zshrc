@@ -40,28 +40,18 @@ if [ $TERM = "rxvt" ];then
     export LC_CTYPE=en_US.iso-8859-1
 fi
 
-# Alias para los usuarios de sgml
-alias sgml2html='sgml2html -c latin -l es'
-alias sgml2txt='sgml2txt -c latin -l es'
-alias sgml2rtf='sgml2rtf -c latin -l es'
-
 # Alias para los vagos
 alias l='ls -l'
 alias t="ls -rt1a"
 alias s="ls -asrS1"
 alias lc="ls|wc -l"
 alias d='df -h'
-#alias mp='mplayer'
-#alias mps='mplayer -nosound'
-#alias atanks='atanks -d 16 --nosound'
-
 
 # Alias de debian
 alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
 alias menu='cat /etc/X11/WindowMaker/menu.hook'
 
 # Alias para los editores
-alias joe='joe -asis'
 
 # Alias para colores
 alias ls='ls --color=auto'
@@ -69,9 +59,6 @@ alias grep='grep --color=auto'
 
 # Alias para sonido
 alias play='aplay'
-
-# Alias para mc
-alias mc='mc -ux'
 
 ####################### Listado de Alias Personales #####################
 
@@ -88,84 +75,48 @@ alias pexec='chmod 775' #asignar permiso de ejecucion
 #alias pkgstatus="dpkg -C"
 
 alias descargar='apt-get -d install'
-
-#----------scripts----------
-alias color='sh /home/wyrven/scripts/color' #cambia la gamma del escritorio
-#alias notepad='sh /home/wyrven/scripts/notepad++' #mierd... no viene el notepad++ para linux
-#alias paint='wine /media/Wyrven/WINDOWS/system32/mspaint.exe' #ms paint de windows #no lo uso tengo kolourpaint
-#alias autopkg='sh /home/wyrven/scripts/autorepo' #actualiza el repositorio
-#alias updpkg='sh /home/wyrven/scripts/autorepo'
-#alias scanpkg='dpkg-scanpackages /home/wyrven/pkgs/. /dev/null | gzip -9c> /home/wyrven/pkgs/Packages.gz'
-
-alias ezsh='sudo geany /etc/zsh/zshrc'  #editar este archivo
+alias ezsh='sudo vim ~.zshrc'  #editar este archivo
 
 #programas
-alias py='python' #python estandar interprete por defecto del SO
-alias ipy='ipython'  #ipython interprete
-#alias py25='python2.5'
-alias py26='python2.6'
-#alias py27='python2.7'
-#alias py3k='python3.1'
-alias pydb='winpydb' #debuguer de python
+alias py='python' #version de python por defecto
+alias py2='python2' #lanza python 2.x
+alias py3='python3'
+alias ipy='ipython'  #ipython interactive
+#alias pydb='winpydb' #debuguer de python
 
-alias vim='vi' #mmm ni lo uso, no soy tan fana
+
+alias vi='vim'
+alias vim='gvim'
 alias ge='gedit'
+alias leaf='leafpad'
+alias fm='pcmanfm'
 alias suge='sudo gedit'
-#alias spe='./home/wyrven/script/spe'
-alias edit='geany' #mi editor por defecto.. al menos yo uso siempre este
-alias eric='eric4' 
-alias pybean='/usr/local/netbeans-6.7/bin/netbeans'
-alias netbeans6.7='/usr/local/netbeans-6.7/bin/netbeans'
-alias netbeans6.8='/usr/local/netbeans-6.8/bin/netbeans'
+alias edit='geany'
 
-alias win='wine'
-alias win32='wine'
-alias nav='nautilus'
-alias sunav='sudo nautilus'
-alias cpdf='pdftotext -layout'
-alias paint='kolourpaint'
-
-alias solver='lp_solve' #programacion lineal
-alias simplex='lp_solve'
+#alias win='wine'
+#alias win32='wine'
 
 #-----------directorios-----------------
 alias hdir='cd /home; pwd'
 alias rdir='sudo cd /root; pwd'
-alias udir='cd /home/wyrven; pwd'
-#alias cvsdir='cd /home/cvs pwd'
+alias udir='cd ~; pwd'
+alias wdir='cd ~/Workspace; pwd'
+alias pydir='cd ~/Workspace/Python'
+alias pythondir='cd ~/Workspace/Python; pwd; ls -l'
 
-#alias repo='cd /home/wyrven/pkgs; pwd;'
-#alias pkgs='cd /home/wyrven/pkgs; pwd;'
+#alias repo='cd ~/pkgs; pwd;'
+#alias pkgs='cd ~/pkgs; pwd;'
 
-alias proydir='cd /home/wyrven/Proyectos; pwd;'
-alias pdir='cd /home/wyrven/Proyectos; pwd;'
-
-#lp_solver proy dir
-alias lpdir='cd /home/wyrven/Proyectos/Lp; pwd;'
-alias pldir='cd /home/wyrven/Proyectos/Lp; pwd;'
-
-#python proy dir
-alias pythondir='cd /home/wyrven/Proyectos/Python; pwd; ls -l'
-alias pydir='cd /home/wyrven/Proyectos/Python; pwd; ls -l'
-#PyGame dir
-alias pygamedir='cd /home/wyrven/Proyectos/Python/PyGame; pwd; ls -l'
-alias pygdir='cd /home/wyrven/Proyectos/Python/PyGame; pwd'
-#Django dir
-alias djangodir='cd /home/wyrven/Proyectos/Python/Django; pwd'
-alias djdir='cd /home/wyrven/Proyectos/Python/Django; pwd'
-
-alias cursos='nautilus /media/Radamanthys/Cursos; pwd'
 #-------------otros-------------------
 alias root='su' #cambia al usuario root
-alias postgres='su postgres'  #cambia al usuario postgres
-alias supsql='su postgres'
-alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
-alias pkglist='sudo gedit /etc/apt/sources.list'
+# alias postgres='su postgres'  #cambia al usuario postgres
+# alias supsql='su postgres'
+# alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
+# alias pkglist='sudo gedit /etc/apt/sources.list'
 
 alias reiniciar='sudo reboot'
 alias apagar='sudo halt'
 
-#alias menkai='nautilus "/media/Radamanthys/Wyrven Files/Archivos/Otros/Radamanthys/back/Nueva carpeta (4)"; clear'
 
 ############################### MEGAPROMPT ##############################
 function precmd {
@@ -290,7 +241,7 @@ $PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_CYAN$PR_URCORNER$PR_SHIFT_OUT\
 $PR_CYAN$PR_SHIFT_IN$PR_LLCORNER$PR_BLUE$PR_HBAR$PR_SHIFT_OUT(\
 %(?..$PR_LIGHT_RED%?$PR_BLUE:)\
 ${(e)PR_APM}$PR_YELLOW%D{%H:%M}\
-$PR_LIGHT_BLUE:%(!.$PR_RED.$PR_WHITE)%#$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
+$PR_LIGHT_BLUE:%S(!.$PR_RED.$PR_WHITE)%#$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 $PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 $PR_NO_COLOUR '
 
