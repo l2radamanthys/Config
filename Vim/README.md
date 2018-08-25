@@ -80,6 +80,8 @@ Clonar el reporsitorio de vundle en la capeta HOME/[USUARIO]/.vim
 
 Copiar y pegar el archivo **.vimrc** en la carpeta Home del usuario actual.
 
+    $ cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc
+
 Abrir vim y en modo visualizacion presionar **":"** y escribir
 
     :BundleInstall 
