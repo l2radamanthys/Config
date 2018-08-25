@@ -9,6 +9,9 @@ alias lc="ls|wc -l"
 alias d='df -h'
 alias p='pwd'
 
+alias touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
+alias touchpad-enable='xinput enable 16'
+alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
 
 # Alias de debian
 alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
@@ -23,7 +26,6 @@ alias grep='grep --color=auto'
 # Alias para sonido
 alias play='aplay'
 
-
 #----------comandos---------
 alias cls='clear'
 alias cd.='cd ..'
@@ -31,14 +33,11 @@ alias atras='cd ..'
 alias quit='exit'
 alias pexec='chmod 775' #asignar permiso de ejecucion
 
-
 #---------- sin conexion internet ----------#
 #alias instalar="sudo dpkg -i" #comandos varios para dpkg
 #alias desinstalar="sudo dpkg -r"
 #alias pkgstatus="dpkg -C"
-
 alias descargar='apt-get -d install'
-alias ezsh='sudo vim ~.zshrc'  #editar este archivo
 
 # Alias Python
 alias py='python' #version de python por defecto
@@ -49,19 +48,22 @@ alias ipy='ipython'  #ipython interactive
 alias venv='virtualenv'
 alias env-init='source env/bin/activate'
 alias env-stop='deactivate'
+alias pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
 
 # Alias Configuracion
+# alias esh='vim ~.bashrc'  #editar este archivo
 alias ezsh='vim ~/.zshrc'
+alias ealias='vim ~/.my_aliases'
 alias evim='vim ~/.vimrc'
 
 # Alias Editores
-alias vi='vim'
+alias vi='vi'
 alias vim='gvim'
 alias ge='gedit'
 alias leaf='leafpad'
 alias fm='pcmanfm'
 alias suge='sudo gedit'
-alias edit='geany'
+#alias edit='geany'
 
 # Alias Aplicaciones
 #alias win='wine'
@@ -73,12 +75,13 @@ alias sunav='sudo pcmanfm'
 alias hdir='cd /home; pwd'
 alias rdir='sudo cd /root; pwd'
 alias udir='cd ~; pwd'
-alias wdir='cd ~/Workspace; pwd'
+alias wdir='cd ~/Workspace'
 alias pydir='cd ~/Workspace/Python'
+alias ndir='cd ~/Workspace/NodeJs'
 alias pythondir='cd ~/Workspace/Python; pwd; ls -l'
-
-#alias repo='cd ~/pkgs; pwd;'
-#alias pkgs='cd ~/pkgs; pwd;'
+alias cdw='cd ~/Workspace'
+alias cdp='cd ~/Workspace/Python'
+alias cdn='cd ~/Workspace/NodeJs'
 
 # Otros
 alias root='su' #cambia al usuario root

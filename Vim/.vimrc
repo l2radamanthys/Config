@@ -1,3 +1,11 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VINFILE CONFIGURATION
+" Autor: Ricardo Daniel Quiroga
+" Fecha: 21/08/2018
+" OS: Linux/Ubuntu
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -7,23 +15,53 @@ let path='$VIM/vimfiles/bundle/'
 "call vundle#begin()
 call vundle#rc()
 
+filetype plugin indent on
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins Instalar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'gmarik/vundle'
+
+" Navegador de Ficheros
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs' 
-Bundle 'scrooloose/nerdcommenter'
-" Bundle 'scrooloose/syntastic' rompe las bolas con latex
-Bundle 'msanders/snipmate.vim'
+
+" None
+Bundle 'jistr/vim-nerdtree-tabs'
+
+" Listado de Etiquetas
 Bundle 'taglist.vim'
+
+" No compatible con latex
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+
+" Autocomplete
 Bundle 'AutoComplPop'
+
 Bundle 'FindFile'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 
+" C# suport
+Plugin 'OrangeT/vim-csharp'
+
+" Comentar
+Plugin 'scrooloose/nerdcommenter'
+
+" TagBarr
+Bundle 'majutsushi/tagbar'
+
+" Colores
+Bundle 'lilydjwg/colorizer'
+
+" Enhanse JS sintax
+Plugin 'jelera/vim-javascript-syntax'
+
+" Typescript sintax
+Plugin 'leafgarland/typescript-vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-filetype plugin indent on
 
 
 " Opciones de Plegado
@@ -43,8 +81,8 @@ set number                          " mostrar numero de linea
 set fileencoding=utf-8              " codificacion de texto
 set expandtab                       " Espacios en ves de tabulaciones
 set tabstop=4                       " tamaño tabulacion
-retab                               
 set shiftwidth=4                    " identacion tamaño y que sea automatica
+retab                               
 set autoindent 
 set paste                           " Desactivar esta entrada soluciona supuestamente el problema de autocomplete de Snipmate
 set ic
@@ -52,12 +90,12 @@ set ic
 set autochdir                       " Cambiar el directorio actual al archivo abierto
 autocmd BufEnter * silent! lcd %:p:h
 
-" funcion normal (no vim normal sino mas conocido) de la tecla backspace activo osea poder borrar 
 set backspace=eol,start,indent
 
 " set mouse=v
 set showmode                        " muestra el modo actual de VIM Normal/Edicion/Visor
 set nobackup                        " backup de archivos desactivado
+set noswapfile                      " desactiva archivos *.swap
 set ruler
 set showcmd                         " muestra la convinacion de teclas actual
 set nowrap                          " desactiva el cortado de linea
@@ -68,13 +106,12 @@ set title                           " mostrar la ruta completa del archivo que s
 set undolevels=500                  "deshacer casi infinito
 "set history=20                      "historia de comandos
 
-highlight ColorColumn guibg=Gray8   " color de la columna 80
 set colorcolumn=80                  " colorea la columna 80
+highlight ColorColumn guibg=Gray8   " color de la columna 80
+set cursorline                      " resalta la linea actual del cursor
 
-" resalta la linea actual del cursor
-set cursorline
-
-set guitablabel=\[%N\]\ %t\ %M 
+set guitablabel=\[%N\]\ %t\ %M
+au GUIEnter * set lines=30 columns=100  " Configura el tama? inicial de la ventana al abrir vim
 
 " Esquema de Colores
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -92,11 +129,20 @@ endif
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
 
+" map <F2> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+" map <F3> :TlistToggle<CR>
+map <C-t> :TlistToggle<CR>
+" map <F4> :NERDTreeTabsToggle<CR>
+
+nmap <F8> :TagbarToggle<CR>
+
 nmap _nt tabn
 nmap _pt tabp
 nmap _ft tabfirst
 nmap _lt tablast
 
+noremap <silent><F5> :wall \| !clear && echo "% is running..." && python3 %<CR>
 
 " Otra Configuracion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,18 +160,18 @@ au GUIEnter * set lines=30 columns=100
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeHighlightCursorline=1
 let NERDTreeStatusline='-- Ficheros --'
-let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc']
+let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc', '\.js.map', '__pycache__']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
-let NERDTreeMapOpenInTab='<2-LeftMouse>'
+" let NERDTreeMapOpenInTab='<2-LeftMouse>'
+let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeDirArrows=1
+let g:netrw_sort_sequence='\.c$,\.h$,*'
 
+" Configuracion NerdTree tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:nerdtree_tabs_open_on_console_startup=0 "no abrir al inicio
 let g:nerdtree_tabs_open_on_gui_startup=0 "no abrir al inicio
-
-"let NERDTreeDirArrows=1
-
-map <F2> :NERDTreeToggle<CR>
-"map <F4> :NERDTreeTabsToggle<CR>
 
 " Configuracion de TagList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -176,3 +222,13 @@ map <F8> :Errors<CR>
 " Configuracion de EasyMotion (una verga no se como usarlo)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_leader_key = ',,' 
+
+
+""""""""""""""""""""""""""""""""""""""""
+" Typescript configuracion
+""""""""""""""""""""""""""""""""""""""""
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
