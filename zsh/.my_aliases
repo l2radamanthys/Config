@@ -8,6 +8,7 @@ alias s="ls -asrS1"
 alias lc="ls|wc -l"
 alias d='df -h'
 alias p='pwd'
+alias tls='tree -L 1'
 
 alias touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
 alias touchpad-enable='xinput enable 16'
@@ -85,7 +86,7 @@ alias cdn='cd ~/Workspace/NodeJs'
 
 # Otros
 alias root='su' #cambia al usuario root
-# alias postgres='su postgres'  #cambia al usuario postgres
+alias postgres='su postgres'  #cambia al usuario postgres
 # alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
 # alias pkglist='sudo gedit /etc/apt/sources.list'
 # alias apache-init='sudo service apache2 start'
