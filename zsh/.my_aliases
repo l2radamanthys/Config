@@ -8,11 +8,18 @@ alias s="ls -asrS1"
 alias lc="ls|wc -l"
 alias d='df -h'
 alias p='pwd'
-alias tls='tree -L 1'
+alias tls='tree -F 1'
 
 alias touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
 alias touchpad-enable='xinput enable 16'
 alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
+alias bluetooth-off='rfkill block bluetooth'
+alias backup-alias='cp ~/.my_aliases ~/Workspace/Config/zsh/.my_aliases'
+alias restore-alias='cp ~/Workspace/Config/zsh/.my_aliases ~/.my_aliases'
+alias backup-zshrc='cp ~/.zshrc ~/Workspace/Config/zsh/.zshrc'
+alias restore-zshrc='cp ~/Workspace/Config/zsh/.zshrc ~/.zshrc'
+alias backup-vimrc='cp ~/.vimrc ~/Workspace/Config/Vim/.vimrc'
+alias restore-vimrc='cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc'
 
 # Alias de debian
 alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
@@ -45,6 +52,8 @@ alias py='python' #version de python por defecto
 alias py2='python2' #lanza python 2.x
 alias py3='python3'
 alias ipy='ipython'  #ipython interactive
+alias ipy='ipython2'  #ipython interactive
+alias ipy='ipython3'  #ipython interactive
 #alias pydb='winpydb' #debuguer de python
 alias venv='virtualenv'
 alias env-init='source env/bin/activate'
