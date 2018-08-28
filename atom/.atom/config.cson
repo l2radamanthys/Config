@@ -1,0 +1,14 @@
+"*":
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "wyrven-theme-syntax"
+    ]
+  editor:
+    fontFamily: "Menlo, Source Code Pro, Consolas"
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "3f79922c-a1ae-408c-aa09-c9bf7bf8cb85"
