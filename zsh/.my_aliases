@@ -8,7 +8,7 @@ alias s="ls -asrS1"
 alias lc="ls|wc -l"
 alias d='df -h'
 alias p='pwd'
-alias tls='tree -L 1'
+alias ts='tree -L 1'
 
 alias touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
 alias touchpad-enable='xinput enable 16'
@@ -41,11 +41,13 @@ alias atras='cd ..'
 alias quit='exit'
 alias pexec='chmod 775' #asignar permiso de ejecucion
 
-#---------- sin conexion internet ----------#
+# Paquetes
 #alias instalar="sudo dpkg -i" #comandos varios para dpkg
 #alias desinstalar="sudo dpkg -r"
-#alias pkgstatus="dpkg -C"
+alias pkgstatus="dpkg -C"
 alias descargar='apt-get -d install'
+alias sources-list='vim gedit /etc/apt/sources.list' #editar lista repositorios
+# alias pkglist='sudo gedit /etc/apt/sources.list'
 
 # Alias Python
 alias py='python' #version de python por defecto
@@ -58,10 +60,20 @@ alias ipy='ipython3'  #ipython interactive
 alias venv='virtualenv'
 alias env-init='source env/bin/activate'
 alias env-stop='deactivate'
+
+# Alias EmberJs
+alias emb='ember'
+alias enber='ember'
+alias emb-s='ember s' # server app
+
+# Alias Git
+alias git-reset='git reset --hard HEAD'
+alias git-revert='git reset --hard'
+alias git-comm='git commit -m'
 alias pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
 
 # Alias Configuracion
-# alias esh='vim ~.bashrc'  #editar este archivo
+alias esh='vim ~.bashrc'  #editar este archivo
 alias ezsh='vim ~/.zshrc'
 alias ealias='vim ~/.my_aliases'
 alias evim='vim ~/.vimrc'
@@ -71,14 +83,15 @@ alias vi='vi'
 alias vim='gvim'
 alias ge='gedit'
 alias leaf='leafpad'
-alias fm='pcmanfm'
 alias suge='sudo gedit'
-#alias edit='geany'
+alias edit='gedit'
 
 # Alias Aplicaciones
 #alias win='wine'
 #alias win32='wine'
 alias nav='pcmanfm'
+alias fm='pcmanfm'
+alias nav2='thunar'
 alias sunav='sudo pcmanfm'
 
 # Alias para Directorios
@@ -94,18 +107,24 @@ alias cdp='cd ~/Workspace/Python'
 alias cdn='cd ~/Workspace/NodeJs'
 alias cde='cd ~/Workspace/EmberJs/'
 
-# Otros
+# Otros servicios
 alias root='su' #cambia al usuario root
 alias postgres='sudo -i -u postgres'  #cambia al usuario postgres
 alias ppsql='sudo -u postgres psql'  #cambia al usuario postgres
-# alias pkgsrc='sudo gedit /etc/apt/sources.list' #editar lista repositorios
-# alias pkglist='sudo gedit /etc/apt/sources.list'
+alias postgres-status='service postgresql status'
+alias postgres-stop='service postgresql stop'
+alias mongo-status='service mongod status'
+alias redis-status='service redis status'
+alias redis-stop='service redis stop'
 # alias apache-init='sudo service apache2 start'
 # alias apache-stop='sudo service apache2 stop'
 # alias apache-rest='sudo service apache2 restart' 
 # alias mysql-init='sudo service mysql start'
 # alias mysql-stop='sudo service mysql stop'
 # alias mysql-rest='sudo service mysql restart'
+
+# Scripts
+alias translate='python3 ~/Workspace/Python/TkTranslate/main.py'
 
 # Varios
 alias reiniciar='sudo reboot -r now'
