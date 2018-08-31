@@ -30,3 +30,16 @@
 
 #### pyenv
 la configuración de la DB esta en el archivo `.env`
+
+## Iniciar con el sistema
+
+Modificar el archivo `/etc/rc0.d` o ejecutar el comando
+
+	update-rc.d postgresql enable
+
+## administrar servicio
+
+	service postgresql start|stop|restart|status
+
+
+

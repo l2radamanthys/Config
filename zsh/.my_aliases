@@ -85,6 +85,7 @@ alias ge='gedit'
 alias leaf='leafpad'
 alias suge='sudo gedit'
 alias edit='gedit'
+alias markdown='remarkable'
 
 # Alias Aplicaciones
 #alias win='wine'
@@ -111,9 +112,13 @@ alias cde='cd ~/Workspace/EmberJs/'
 alias root='su' #cambia al usuario root
 alias postgres='sudo -i -u postgres'  #cambia al usuario postgres
 alias ppsql='sudo -u postgres psql'  #cambia al usuario postgres
+alias postgres-start='service postgresql start'
 alias postgres-status='service postgresql status'
 alias postgres-stop='service postgresql stop'
+alias mongo-start='service mongod start'
 alias mongo-status='service mongod status'
+alias mongo-stop='service mongod stop'
+alias redis-start='service redis start'
 alias redis-status='service redis status'
 alias redis-stop='service redis stop'
 # alias apache-init='sudo service apache2 start'
