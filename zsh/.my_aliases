@@ -67,7 +67,8 @@ alias enber='ember'
 alias emb-s='ember s' # server app
 alias emb-gr='ember g route'
 alias emb-gm='ember g model'
-alias emb-gc='ember g controller'
+alias emb-gc='ember g component'
+alias emb-gct='ember g controller'
 alias emb-ga='ember g adapter'
 
 # Alias Git
