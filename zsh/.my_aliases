@@ -65,11 +65,22 @@ alias env-stop='deactivate'
 alias emb='ember'
 alias enber='ember'
 alias emb-s='ember s' # server app
+alias emb-gr='ember g route'
+alias emb-gm='ember g model'
+alias emb-gc='ember g controller'
+alias emb-ga='ember g adapter'
 
 # Alias Git
 alias git-reset='git reset --hard HEAD'
 alias git-revert='git reset --hard'
 alias git-comm='git commit -m'
+alias gadd='git add .'
+alias gcomm='git commit -m'
+alias git-pull='git pull origin'
+alias gpull='git pull origin'
+alias git-push='git push origin'
+alias gpush='git push origin'
+alias gcheck='git checkout'
 alias pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
 
 # Alias Configuracion
