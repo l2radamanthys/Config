@@ -1,0 +1,8 @@
+atom-handlebars
+autocomplete-python
+editorconfig
+ember-snippets
+file-icons
+gtk-dark-theme
+pigments
+wyrven-theme-syntax

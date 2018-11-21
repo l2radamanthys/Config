@@ -51,7 +51,9 @@ Opcionalmente copiar las carpetas /colors y /snippets.
 ## Ubuntu/Linux
 
 ### Instalación
- #Todo
+
+    $ sudo apt-get install vim vim-gtk git
+ 
 
 ### 2. Instalar Dependencias
 - CURL
@@ -78,8 +80,12 @@ Clonar el reporsitorio de vundle en la capeta HOME/[USUARIO]/.vim
 
 Copiar y pegar el archivo **.vimrc** en la carpeta Home del usuario actual.
 
+    $ cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc
+
 Abrir vim y en modo visualizacion presionar **":"** y escribir
 
     :BundleInstall 
 
-Opcionalmente copiar las carpetas /colors y /snippets en el directorio ~/.vim.  
+Opcionalmente copiar las carpetas `/colors` y `/snippets` en el directorio `~/.vim`. 
+
+    cp -fr ~/Workspace/Config/Vim/colors ~/.vim
