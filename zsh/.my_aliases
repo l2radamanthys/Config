@@ -72,24 +72,35 @@ alias ,emb-gc='ember g component'
 alias ,emb-gct='ember g controller'
 alias ,emb-ga='ember g adapter'
 
-#alias node 
+#alias node angular cli 
 alias ,ng-s='ng serve'
 alias ,ng-b='ng build --prod'
+alias ,ng-gc='ng generate component'
+alias ,ng-gc='ng generate service'
 
 # Alias Git
 alias ,git-reset='git reset --hard HEAD'
 alias ,git-revert='git reset --hard'
 alias ,git-comm='git commit -m'
+alias ,gcomm='git commit -m'
+alias ,g-comm='git commit -m'
 alias ,gadd='git add .'
+alias ,g-add='git add .'
 alias ,gstatus='git status'
 alias ,gremote='git remote -v'
-alias ,gcomm='git commit -m'
 alias ,git-pull='git pull origin'
+alias ,g-pull='git pull'
 alias ,gpull='git pull origin'
 alias ,git-push='git push origin'
 alias ,gpush='git push origin'
+alias ,g-push='git push'
 alias ,gcheck='git checkout'
+alias ,g-check='git checkout'
+alias ,g-cd='git checkout -b develop'
+alias ,g-cm='git checkout master'
+
 alias ,pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
+
 
 # Alias Configuracion
 alias ,esh='vim ~.bashrc'  #editar este archivo
@@ -160,7 +171,7 @@ alias ,mysql-rest='sudo service mysql restart'
 
 # Scripts
 alias translate='python3 ~/Workspace/Python/TkTranslate/main.py'
-
+alias trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 
 alias ,marcar='echo `date +%Y-%m-%d %H:%M "$1" > ~/Workspace/horarios'
 
