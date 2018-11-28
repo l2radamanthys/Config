@@ -1,7 +1,5 @@
 [user]
-	name = Ricardo D. Quiroga
 	email = l2radamanthys@gmail.com
-[core]
-	autocrlf = true
-	excludesfile = D:\\Mis documentos\\gitignore_global.txt
-	longpaths = true
+	name = Ricardo D. Quiroga
+[credential]
+	helper = store
