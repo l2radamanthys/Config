@@ -1,29 +1,29 @@
 # zsh custom alias
 
 # Alias para los vagos
-alias l='ls -l'
-alias la='ls -a'
-alias t="ls -rt1a"
-alias s="ls -asrS1"
-alias lc="ls|wc -l"
-alias d='df -h'
-alias p='pwd'
-alias ts='tree -L 1'
+alias ,l='ls -l'
+alias ,la='ls -a'
+alias ,t="ls -rt1a"
+alias ,s="ls -asrS1"
+alias ,lc="ls|wc -l"
+alias ,d='df -h'
+alias ,p='pwd'
+alias ,ts='tree -L 1'
 
-alias touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
-alias touchpad-enable='xinput enable 16'
-alias battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
-alias bluetooth-off='rfkill block bluetooth'
-alias backup-alias='cp ~/.my_aliases ~/Workspace/Config/zsh/.my_aliases'
-alias restore-alias='cp ~/Workspace/Config/zsh/.my_aliases ~/.my_aliases'
-alias backup-zshrc='cp ~/.zshrc ~/Workspace/Config/zsh/.zshrc'
-alias restore-zshrc='cp ~/Workspace/Config/zsh/.zshrc ~/.zshrc'
-alias backup-vimrc='cp ~/.vimrc ~/Workspace/Config/Vim/.vimrc'
-alias restore-vimrc='cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc'
+alias ,touchpad-disable='xinput disable 16' # 16 es el id correspondiente al touchpad en pc
+alias ,touchpad-enable='xinput enable 16'
+alias ,battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
+alias ,bluetooth-off='rfkill block bluetooth'
+alias ,backup-alias='cp ~/.my_aliases ~/Workspace/Config/zsh/.my_aliases'
+alias ,restore-alias='cp ~/Workspace/Config/zsh/.my_aliases ~/.my_aliases'
+alias ,backup-zshrc='cp ~/.zshrc ~/Workspace/Config/zsh/.zshrc'
+alias ,restore-zshrc='cp ~/Workspace/Config/zsh/.zshrc ~/.zshrc'
+alias ,backup-vimrc='cp ~/.vimrc ~/Workspace/Config/Vim/.vimrc'
+alias ,restore-vimrc='cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc'
 
 # Alias de debian
-alias actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
-alias menu='cat /etc/X11/WindowMaker/menu.hook'
+alias ,actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
+alias ,menu='cat /etc/X11/WindowMaker/menu.hook'
 
 # Alias para los editores
 
@@ -37,16 +37,17 @@ alias play='aplay'
 #----------comandos---------
 alias cls='clear'
 alias cd.='cd ..'
+alias cd..='cd ..'
 alias atras='cd ..'
 alias quit='exit'
-alias pexec='chmod 775' #asignar permiso de ejecucion
+alias ,pexec='chmod 775' #asignar permiso de ejecucion
 
 # Paquetes
 #alias instalar="sudo dpkg -i" #comandos varios para dpkg
 #alias desinstalar="sudo dpkg -r"
-alias pkgstatus="dpkg -C"
-alias descargar='apt-get -d install'
-alias sources-list='vim gedit /etc/apt/sources.list' #editar lista repositorios
+alias ,pkgstatus="dpkg -C"
+alias ,descargar='apt-get -d install'
+alias ,sources-list='vim gedit /etc/apt/sources.list' #editar lista repositorios
 # alias pkglist='sudo gedit /etc/apt/sources.list'
 
 # Alias Python
@@ -57,57 +58,73 @@ alias ipy='ipython'  #ipython interactive
 alias ipy='ipython2'  #ipython interactive
 alias ipy='ipython3'  #ipython interactive
 #alias pydb='winpydb' #debuguer de python
-alias venv='virtualenv'
-alias env-init='source env/bin/activate'
-alias env-stop='deactivate'
+alias ,venv='virtualenv'
+alias ,env-init='source env/bin/activate'
+alias ,env-stop='deactivate'
 
 # Alias EmberJs
-alias emb='ember'
-alias enber='ember'
-alias emb-s='ember s' # server app
-alias emb-gr='ember g route'
-alias emb-gm='ember g model'
-alias emb-gc='ember g component'
-alias emb-gct='ember g controller'
-alias emb-ga='ember g adapter'
+alias ,emb='ember'
+alias ,enber='ember'
+alias ,emb-s='ember s' # server app
+alias ,emb-gr='ember g route'
+alias ,emb-gm='ember g model'
+alias ,emb-gc='ember g component'
+alias ,emb-gct='ember g controller'
+alias ,emb-ga='ember g adapter'
+
+#alias node angular cli 
+alias ,ng-s='ng serve'
+alias ,ng-b='ng build --prod'
+alias ,ng-gc='ng generate component'
+alias ,ng-gc='ng generate service'
 
 # Alias Git
-alias git-reset='git reset --hard HEAD'
-alias git-revert='git reset --hard'
-alias git-comm='git commit -m'
-alias gadd='git add .'
-alias gstatus='git status'
-alias gremote='git remote -v'
-alias gcomm='git commit -m'
-alias git-pull='git pull origin'
-alias gpull='git pull origin'
-alias git-push='git push origin'
-alias gpush='git push origin'
-alias gcheck='git checkout'
-alias pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
+alias ,git-reset='git reset --hard HEAD'
+alias ,git-revert='git reset --hard'
+alias ,git-comm='git commit -m'
+alias ,gcomm='git commit -m'
+alias ,g-comm='git commit -m'
+alias ,gadd='git add .'
+alias ,g-add='git add .'
+alias ,gstatus='git status'
+alias ,gremote='git remote -v'
+alias ,git-pull='git pull origin'
+alias ,g-pull='git pull'
+alias ,gpull='git pull origin'
+alias ,git-push='git push origin'
+alias ,gpush='git push origin'
+alias ,g-push='git push'
+alias ,gcheck='git checkout'
+alias ,g-check='git checkout'
+alias ,g-cd='git checkout -b develop'
+alias ,g-cm='git checkout master'
+
+alias ,pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
+
 
 # Alias Configuracion
-alias esh='vim ~.bashrc'  #editar este archivo
-alias ezsh='vim ~/.zshrc'
-alias ealias='vim ~/.my_aliases'
-alias evim='vim ~/.vimrc'
+alias ,esh='vim ~.bashrc'  #editar este archivo
+alias ,ezsh='vim ~/.zshrc'
+alias ,ealias='vim ~/.my_aliases'
+alias ,evim='vim ~/.vimrc'
 
 # Alias Editores
 alias vi='vi'
 alias vim='gvim'
 alias ge='gedit'
-alias leaf='leafpad'
-alias suge='sudo gedit'
+alias ,leaf='leafpad'
+alias ,suge='sudo gedit'
 alias edit='gedit'
 alias markdown='remarkable'
+alias ,md='remarkable'
 
 # Alias Aplicaciones
 #alias win='wine'
 #alias win32='wine'
-alias nav='pcmanfm'
-alias fm='pcmanfm'
-alias nav2='thunar'
-alias sunav='sudo pcmanfm'
+alias ,nav='pcmanfm'
+alias ,fm='pcmanfm'
+alias ,nav2='thunar'
+alias ,sunav='sudo pcmanfm'
 
 # Alias para Directorios
 alias hdir='cd /home; pwd'
@@ -123,27 +140,40 @@ alias cdn='cd ~/Workspace/NodeJs'
 alias cde='cd ~/Workspace/EmberJs/'
 
 # Otros servicios
-alias root='su' #cambia al usuario root
-alias postgres='sudo -i -u postgres'  #cambia al usuario postgres
-alias ppsql='sudo -u postgres psql'  #cambia al usuario postgres
-alias postgres-start='service postgresql start'
-alias postgres-status='service postgresql status'
-alias postgres-stop='service postgresql stop'
-alias mongo-start='service mongod start'
-alias mongo-status='service mongod status'
-alias mongo-stop='service mongod stop'
-alias redis-start='service redis start'
-alias redis-status='service redis status'
-alias redis-stop='service redis stop'
-# alias apache-init='sudo service apache2 start'
-# alias apache-stop='sudo service apache2 stop'
-# alias apache-rest='sudo service apache2 restart' 
-# alias mysql-init='sudo service mysql start'
-# alias mysql-stop='sudo service mysql stop'
-# alias mysql-rest='sudo service mysql restart'
+alias ,root='su' #cambia al usuario root
+alias ,postgress='sudo -i -u postgres'  #cambia al usuario postgres
+alias ,psqls='sudo -u postgres psql'  #cambia al usuario postgres
+
+alias ,postgres-start='service postgresql start'
+alias ,postgres-status='service postgresql status'
+alias ,postgres-stop='service postgresql stop'
+
+alias ,mongo-start='service mongod start'
+alias ,mongo-status='service mongod status'
+alias ,mongo-stop='service mongod stop'
+
+alias ,redis-start='service redis start'
+alias ,redis-status='service redis status'
+alias ,redis-stop='service redis stop'
+
+alias ,apache-start='sudo service apache2 start'
+alias ,apache2-start='sudo service apache2 start'
+alias ,apache-stop='sudo service apache2 stop'
+alias ,apache2-stop='sudo service apache2 stop'
+alias ,apache-status='sudo service apache2 status'
+alias ,apache2-status='sudo service apache2 status'
+alias ,apache-rest='sudo service apache2 restart' 
+
+alias ,mysql-init='sudo service mysql start'
+alias ,mysql-stop='sudo service mysql stop'
+alias ,mysql-status='sudo service mysql status'
+alias ,mysql-rest='sudo service mysql restart'
 
 # Scripts
 alias translate='python3 ~/Workspace/Python/TkTranslate/main.py'
+alias trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
+
+alias ,marcar='echo `date +%Y-%m-%d %H:%M "$1" > ~/Workspace/horarios'
 
 # Varios
 alias reiniciar='sudo reboot -r now'
