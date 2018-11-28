@@ -3,4 +3,4 @@
     $ sudo apt-get install chromium-browser curl wget
     $ sudo apt-get install font-manager
     $ sudo apt-get install inkscape
-    $ sudo apt-get install
+   
