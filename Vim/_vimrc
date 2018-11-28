@@ -40,7 +40,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'lilydjwg/colorizer'
 Plugin 'ctrlpvim/ctrlp.vim'
 " Python autocompletion
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim' "problema falla al autocompletar
 " Enhanse JS sintax
 Plugin 'jelera/vim-javascript-syntax'
 " Typescript sintax
