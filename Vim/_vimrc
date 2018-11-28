@@ -17,50 +17,43 @@ filetype plugin indent on
 " List of Installed Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'gmarik/vundle'
-
 " Navegador de Ficheros
 Bundle 'scrooloose/nerdtree'
-
 " Mantiene el nerdtree idependiente de la pesta?
 Plugin 'jistr/vim-nerdtree-tabs'
-
 " Listado de Etiquetas
 Bundle 'taglist.vim'
-
 " Snipmate Package
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-
 " Autocomeplete
 Plugin 'AutoComplPop'
-
 " C# suport
 Plugin 'OrangeT/vim-csharp'
-
 " Comentar
 Plugin 'scrooloose/nerdcommenter'
-
 " TagBarr
 Bundle 'majutsushi/tagbar'
-
 " Colores
 Bundle 'lilydjwg/colorizer'
-
+Plugin 'ctrlpvim/ctrlp.vim'
+" Python autocompletion
+Plugin 'davidhalter/jedi-vim'
 " Enhanse JS sintax
 Plugin 'jelera/vim-javascript-syntax'
-
 " Typescript sintax
 Plugin 'leafgarland/typescript-vim'
-
+" Git integration
+Plugin 'motemen/git-vim' 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                           " resaltar sintaxis
 set anti enc=utf-8
 "set guifont=Source\ Code\ Pro\ 10      " Set font/size in Linux
-set guifont=Source_Code_Pro:h11         " Set font/size in Windows
+set guifont=Menlo:h10         " Set font/size in Windows
 set helplang=es                         " lenguaje de la Ayuda
 set number                              " mostrar numero de linea
 set fileencoding=utf-8                  " codificacion de texto
@@ -118,9 +111,11 @@ endif
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
 
-map <F2> :NERDTreeToggle<CR>
+"map <F2> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 "map <F4> :NERDTreeTabsToggle<CR>
-map <F3> :TlistToggle<CR>
+"map <F3> :TlistToggle<CR>
+map <C-t> :TlistToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 nmap _nt tabn
@@ -167,7 +162,11 @@ let Tlist_Show_Menu=1
 let Tlist_Show_One_File=1
 let tlist_php_settings='php;f:function'   " No muestra las variable
 
-
+" Configuración de CtrlP.vim 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracion de la barra de estado
