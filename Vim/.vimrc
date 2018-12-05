@@ -55,11 +55,20 @@ Bundle 'majutsushi/tagbar'
 " Colores
 Bundle 'lilydjwg/colorizer'
 
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Python autocompletion
+Plugin 'davidhalter/jedi-vim'
+
 " Enhanse JS sintax
 Plugin 'jelera/vim-javascript-syntax'
 
 " Typescript sintax
 Plugin 'leafgarland/typescript-vim'
+
+" Git integration
+Plugin 'motemen/git-vim'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -223,6 +232,11 @@ map <F8> :Errors<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:EasyMotion_leader_key = ',,' 
 
+" Configuración de CtrlP.vim 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip " Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 """"""""""""""""""""""""""""""""""""""""
 " Typescript configuracion
