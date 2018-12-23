@@ -14,12 +14,15 @@ alias ,touchpad-disable='xinput disable 16' # 16 es el id correspondiente al tou
 alias ,touchpad-enable='xinput enable 16'
 alias ,battery='upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage"'
 alias ,bluetooth-off='rfkill block bluetooth'
+alias ,bt-off='rfkill block bluetooth'
 alias ,backup-alias='cp ~/.my_aliases ~/Workspace/Config/zsh/.my_aliases'
 alias ,restore-alias='cp ~/Workspace/Config/zsh/.my_aliases ~/.my_aliases'
 alias ,backup-zshrc='cp ~/.zshrc ~/Workspace/Config/zsh/.zshrc'
 alias ,restore-zshrc='cp ~/Workspace/Config/zsh/.zshrc ~/.zshrc'
 alias ,backup-vimrc='cp ~/.vimrc ~/Workspace/Config/Vim/.vimrc'
 alias ,restore-vimrc='cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc'
+alias ,info='cat ~/.my_aliases | grep'
+alias ,i='cat ~/.my_aliases | grep'
 
 # Alias de debian
 alias ,actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
@@ -30,7 +33,7 @@ alias ,menu='cat /etc/X11/WindowMaker/menu.hook'
 # Alias para colores
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
+alias ,doc='cat .alias_doc | grep'
 # Alias para sonido
 alias play='aplay'
 
@@ -55,12 +58,19 @@ alias py='python' #version de python por defecto
 alias py2='python2' #lanza python 2.x
 alias py3='python3'
 alias ipy='ipython'  #ipython interactive
-alias ipy='ipython2'  #ipython interactive
-alias ipy='ipython3'  #ipython interactive
+alias ipy2='ipython2'  #ipython interactive
+alias ipy3='ipython3'  #ipython interactive
 #alias pydb='winpydb' #debuguer de python
+alias ,note='jupyter notebook --no-browser'
+alias ,note-browser='jupyter notebook'
+alias ,notebook='jupyter notebook --no-browser'
+alias ,note-pass='jupyter notebook password'
 alias ,venv='virtualenv'
 alias ,env-init='source env/bin/activate'
+alias ,env='source env/bin/activate'
+alias ,venv='source venv/bin/activate'
 alias ,env-stop='deactivate'
+alias ,env-rm='rm -fr env'
 
 # Alias EmberJs
 alias ,emb='ember'
@@ -76,36 +86,42 @@ alias ,emb-ga='ember g adapter'
 alias ,ng-s='ng serve'
 alias ,ng-b='ng build --prod'
 alias ,ng-gc='ng generate component'
-alias ,ng-gc='ng generate service'
+alias ,ng-gs='ng generate service'
 
 # Alias Git
 alias ,git-reset='git reset --hard HEAD'
 alias ,git-revert='git reset --hard'
 alias ,git-comm='git commit -m'
-alias ,gcomm='git commit -m'
 alias ,g-comm='git commit -m'
-alias ,gadd='git add .'
+alias ,gcomm='git commit -m'
+alias ,gcm='git commit -m'
 alias ,g-add='git add .'
+alias ,gadd='git add .'
+alias ,gad='git add .'
 alias ,gstatus='git status'
 alias ,gremote='git remote -v'
 alias ,git-pull='git pull origin'
 alias ,g-pull='git pull'
 alias ,gpull='git pull origin'
+alias ,gpl='git pull origin'
 alias ,git-push='git push origin'
 alias ,gpush='git push origin'
+alias ,gph='git push origin'
 alias ,g-push='git push'
 alias ,gcheck='git checkout'
 alias ,g-check='git checkout'
+alias ,gch='git checkout'
 alias ,g-cd='git checkout -b develop'
 alias ,g-cm='git checkout master'
-
+alias ,greset='git reset --hard HEAD'
+alias ,g-reset='git reset --hard HEAD'
 alias ,pyignore='curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore --output .gitignore'
-
 
 # Alias Configuracion
 alias ,esh='vim ~.bashrc'  #editar este archivo
 alias ,ezsh='vim ~/.zshrc'
 alias ,ealias='vim ~/.my_aliases'
+alias ,edoc='vim ~/.alias_doc'
 alias ,evim='vim ~/.vimrc'
 
 # Alias Editores
@@ -115,7 +131,7 @@ alias ge='gedit'
 alias ,leaf='leafpad'
 alias ,suge='sudo gedit'
 alias edit='gedit'
-alias markdown='remarkable'
+alias ,markdown='remarkable'
 alias ,md='remarkable'
 
 # Alias Aplicaciones
@@ -125,6 +141,11 @@ alias ,nav='pcmanfm'
 alias ,fm='pcmanfm'
 alias ,nav2='thunar'
 alias ,sunav='sudo pcmanfm'
+alias ,dropbox-r='dropbox stop && dbus-launch dropbox start'
+alias ,dbox-r='dropbox stop && dbus-launch dropbox start'
+alias ,dbox-s='dropbox stop'
+alias ,dbox-i='dropbox start'
+alias ,corber-build='corber proxy run android —device' 
 
 # Alias para Directorios
 alias hdir='cd /home; pwd'
@@ -138,6 +159,7 @@ alias cdw='cd ~/Workspace'
 alias cdp='cd ~/Workspace/Python'
 alias cdn='cd ~/Workspace/NodeJs'
 alias cde='cd ~/Workspace/EmberJs/'
+alias ,config='cd ~/Workspace/Config'
 
 # Otros servicios
 alias ,root='su' #cambia al usuario root
@@ -145,8 +167,13 @@ alias ,postgress='sudo -i -u postgres'  #cambia al usuario postgres
 alias ,psqls='sudo -u postgres psql'  #cambia al usuario postgres
 
 alias ,postgres-start='service postgresql start'
+alias ,pg-start='service postgresql start'
+alias ,pg-s='service postgresql start'
 alias ,postgres-status='service postgresql status'
+alias ,pg-status='service postgresql status'
+alias ,pg-i='service postgresql status'
 alias ,postgres-stop='service postgresql stop'
+alias ,pg-stop='service postgresql stop'
 
 alias ,mongo-start='service mongod start'
 alias ,mongo-status='service mongod status'
@@ -170,9 +197,9 @@ alias ,mysql-status='sudo service mysql status'
 alias ,mysql-rest='sudo service mysql restart'
 
 # Scripts
-alias translate='python3 ~/Workspace/Python/TkTranslate/main.py'
-alias trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
-
+alias ,translate='python3 ~/Workspace/Python/TkTranslate/main.py'
+alias ,trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
+alias ,ts='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 alias ,marcar='echo `date +%Y-%m-%d %H:%M "$1" > ~/Workspace/horarios'
 
 # Varios
