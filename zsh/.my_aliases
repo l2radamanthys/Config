@@ -25,7 +25,8 @@ alias ,info='cat ~/.my_aliases | grep'
 alias ,i='cat ~/.my_aliases | grep'
 
 # Alias de debian
-alias ,actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
+alias ,actualizar-u='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
+alias ,update='sudo apt update'
 alias ,menu='cat /etc/X11/WindowMaker/menu.hook'
 
 # Alias para los editores
@@ -74,13 +75,15 @@ alias ,env-rm='rm -fr env'
 
 # Alias EmberJs
 alias ,emb='ember'
-alias ,enber='ember'
+alias enber='ember'
 alias ,emb-s='ember s' # server app
 alias ,emb-gr='ember g route'
 alias ,emb-gm='ember g model'
 alias ,emb-gc='ember g component'
 alias ,emb-gct='ember g controller'
 alias ,emb-ga='ember g adapter'
+alias ,emb-gh='ember g helper'
+alias ,emb-d='ember d'
 
 #alias node angular cli 
 alias ,ng-s='ng serve'
@@ -173,7 +176,11 @@ alias ,postgres-status='service postgresql status'
 alias ,pg-status='service postgresql status'
 alias ,pg-i='service postgresql status'
 alias ,postgres-stop='service postgresql stop'
+alias ,pg-restart='service postgresql restart'
+alias ,pg-r='service postgresql restart'
 alias ,pg-stop='service postgresql stop'
+alias ,pg-kpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgress\';"' #pass defecto
+alias ,pg-rpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgres\';"' #pass korolev
 
 alias ,mongo-start='service mongod start'
 alias ,mongo-status='service mongod status'
@@ -201,6 +208,19 @@ alias ,translate='python3 ~/Workspace/Python/TkTranslate/main.py'
 alias ,trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 alias ,ts='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 alias ,marcar='echo `date +%Y-%m-%d %H:%M "$1" > ~/Workspace/horarios'
+
+alias ,start='systemctl start'
+alias ,stop='systemctl stop'
+alias ,restart='systemctl restart'
+alias ,reload='systemctl reload'
+alias ,status='systemctl status'
+alias ,enable='systemctl enable'
+alias ,disable='systemctl disable'
+alias ,is-enabled='systemctl is-enabled'
+alias ,is-active='systemctl is-active'
+alias ,show='systemctl show'
+alias ,mask='systemctl mask'
+alias ,unmask='systemctl unmask'
 
 # Varios
 alias reiniciar='sudo reboot -r now'
