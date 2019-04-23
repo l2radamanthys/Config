@@ -179,8 +179,8 @@ alias ,postgres-stop='service postgresql stop'
 alias ,pg-restart='service postgresql restart'
 alias ,pg-r='service postgresql restart'
 alias ,pg-stop='service postgresql stop'
-alias ,pg-kpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgress\';"' #pass defecto
-alias ,pg-rpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgres\';"' #pass korolev
+# alias ,pg-kpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgress\';"' #pass defecto
+# alias ,pg-rpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgres\';"' #pass korolev
 
 alias ,mongo-start='service mongod start'
 alias ,mongo-status='service mongod status'
