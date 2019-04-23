@@ -40,7 +40,6 @@ Bundle 'honza/vim-snippets'
 Bundle 'AutoComplPop'
 
 Bundle 'FindFile'
-Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 
 " C# suport
@@ -84,7 +83,7 @@ set foldlevel=100                   " Evita que aparesca plegado cambiar por 1 p
 syntax on                           " resaltar sintaxis
 set anti enc=utf-8
 " set guifont=Source\ Code\ Pro\ 10
-set guifont=Menlo\ 9
+set guifont=Menlo\ 10
 set helplang=es                     " lenguaje de la Ayuda
 set number                          " mostrar numero de linea
 set fileencoding=utf-8              " codificacion de texto

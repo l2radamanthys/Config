@@ -7,8 +7,11 @@
     ]
   editor:
     fontFamily: "Menlo, Source Code Pro, Consolas"
-    invisibles: {}
+    invisibles:
+      eol: " "
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "3f79922c-a1ae-408c-aa09-c9bf7bf8cb85"
+  welcome:
+    showOnStartup: false
