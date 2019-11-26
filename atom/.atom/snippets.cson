@@ -45,3 +45,11 @@
   'Ember import Promise':
     'prefix': ',Promise'
     'body': 'import { Promise } from "rsvp";'
+
+  'gt':
+    'prefix': 'gt'
+    'body': '>'
+
+  'lt':
+    'prefix': 'lt'
+    'body': '<'

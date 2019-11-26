@@ -28,6 +28,10 @@
 	
 ## Otros
 
+	sudo -u postgres createuser ricardo
+	sudo -u postgres psql
+	ALTER USER ricardo SUPERUSER CREATEDB;
+
 #### pyenv
 la configuración de la DB esta en el archivo `.env`
 
