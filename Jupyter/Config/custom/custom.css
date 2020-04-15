@@ -1,0 +1,118 @@
+/*
+@very-light-gray: #c5c8c6;
+@light-gray: #969896;
+@gray: #373b41;
+@dark-gray: #282a2e;
+@very-dark-gray: #1d1f21;
+
+@cyan: #8abeb7;
+@blue: #81a2be;
+@purple: #b294bb;
+@green: #b5bd68;
+@red: #cc6666;
+@orange: #de935f;
+@light-orange: #f0c674;
+
+
+@w-green: #8ae234;
+@w-blue1: #0080FF;
+@w-blue2: #729fcf;
+@w-gray1: #656763;
+@w-gray2: #839496;
+@w-gray3: #e3e7df;
+@w-gray4: #555753;
+@w-gray-fg: #babdb6;
+@w-gray-bg: #0e1416;
+@w-gray-bg2: #2e3436;
+@w-orange1: #fcaf3e;
+*/
+
+body, body.notebook_app.command_mode {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.CodeMirror pre, .CodeMirror-dialog, .CodeMirror-dialog .CodeMirror-search-field, .terminal-app .terminal {
+    font-family: Menlo, "Source Code Pro", Monaco, monospace;
+    font-size: 10pt;
+}
+
+#notebook_panel {
+  background-color: #0e1416;
+}
+
+#notebook-container, #notebook {
+  background-color: #1d1f21;
+}
+
+#notebook-container {
+  border: 1px solid #656763;
+}
+
+#notebook h1,
+#notebook h2,
+#notebook h3 {
+  color: #FFFFFF;
+}
+
+div.cell.selected {
+  border-color: #F8F8F8;
+}
+
+div.input_area {
+  border: None;
+}
+
+div.input_prompt {
+  color: #8ae234;
+  font-size: 9pt;
+}
+
+.CodeMirror {
+  background-color: #282a2e;
+  color: #F8F8F8;
+}
+
+div.CodeMirror-selected {background: #ddd !important;}
+
+#texteditor-backdrop #texteditor-container .CodeMirror-gutter, .CodeMirror-gutters { background: #0e1416; border-right: 0px; color: #777;}
+.CodeMirror-linenumber { color: #b4b7b4; }
+
+.CodeMirror span.cm-variable { color: #FFFFFF; }
+.CodeMirror span.cm-operator { color: #729fcf; }
+.CodeMirror span.cm-number { color: #8ae234; }
+.CodeMirror span.cm-property {color: #e3e7df;}
+.CodeMirror span.cm-attribute {color: #198844;}
+.CodeMirror span.cm-string { color: #8ae234; }
+.CodeMirror span.cm-comment { color: #839496; }
+.CodeMirror span.cm-builtin {color: #e3e7df;}
+.CodeMirror span.cm-meta { color: #8abeb7; }
+.CodeMirror span.cm-def { color: #0080FF; }
+.CodeMirror span.cm-keyword {
+  color: #fcaf3e;
+  font-weight: normal;
+}
+
+
+div.output_area pre {
+  color: #e3e7df;
+  font-size: 10pt;
+}
+
+.cm-s-ipython span.cm-variable {
+  color: #FFFFFF;
+}
+
+div.output_stderr {
+  background: #1d1f21;
+}
+
+div.output_stderr pre {
+  color: #cc6666;
+}
+
+.CodeMirror-cursor { border-left: 1px solid #A7A7A7 !important; margin-top: -2px; min-height: 18px;}
+
+.rendered_html {
+  background-color: #FFFFFF;
+}
