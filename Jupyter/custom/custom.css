@@ -96,19 +96,27 @@ div.CodeMirror-selected {background: #ddd !important;}
 
 div.output_area pre {
   color: #e3e7df;
-  font-size: 9pt;
+  font-size: 10pt;
 }
 
 .cm-s-ipython span.cm-variable {
   color: #FFFFFF;
 }
 
+div.output_stderr {
+  background: #1d1f21;
+}
 
-
-
-
-
-
-
+div.output_stderr pre {
+  color: #cc6666;
+}
 
 .CodeMirror-cursor { border-left: 1px solid #A7A7A7 !important; margin-top: -2px; min-height: 18px;}
+
+.rendered_html {
+  background-color: #FFFFFF;
+}
+
+img {
+  background-color: #FFFFFF;
+}
