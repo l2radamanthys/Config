@@ -91,6 +91,13 @@ alias ,ng-b='ng build --prod'
 alias ,ng-gc='ng generate component'
 alias ,ng-gs='ng generate service'
 
+# cambiar version de node activa
+alias ,node10='nvm use v10'
+alias ,node8='nvm use v8'
+
+#Vue
+alias ,vue-run='npm run dev'
+
 # Alias Git
 alias ,git-reset='git reset --hard HEAD'
 alias ,git-revert='git reset --hard'
@@ -125,11 +132,14 @@ alias ,esh='vim ~.bashrc'  #editar este archivo
 alias ,ezsh='vim ~/.zshrc'
 alias ,ealias='vim ~/.my_aliases'
 alias ,edoc='vim ~/.alias_doc'
+alias ,man='cat ~/.my_aliases | grep'
 alias ,evim='vim ~/.vimrc'
 
 # Alias Editores
-alias vi='vi'
+alias ,vi='vim'
 alias vim='gvim'
+# alias ,vim='vim.gtk3'
+alias ,vim='gvim'
 alias ge='gedit'
 alias ,leaf='leafpad'
 alias ,suge='sudo gedit'
@@ -149,6 +159,7 @@ alias ,dbox-r='dropbox stop && dbus-launch dropbox start'
 alias ,dbox-s='dropbox stop'
 alias ,dbox-i='dropbox start'
 alias ,corber-build='corber proxy run android —device' 
+alias ,ngrok='~/ngrok/ngrok'
 
 # Alias para Directorios
 alias hdir='cd /home; pwd'
@@ -221,6 +232,16 @@ alias ,is-active='systemctl is-active'
 alias ,show='systemctl show'
 alias ,mask='systemctl mask'
 alias ,unmask='systemctl unmask'
+
+# Docker
+alias doker=docker
+alias ,dok-containers='docker container ls'
+alias ,dok-images='docker image ls'
+alias ,dok-stop='docker stop'
+alias ,dok-cont='docker container'
+alias ,dok-build='docker build'
+alias ,dok-run='docker run -d'
+
 
 # Varios
 alias reiniciar='sudo reboot -r now'
