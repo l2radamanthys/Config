@@ -68,6 +68,10 @@ Plugin 'leafgarland/typescript-vim'
 " Git integration
 Plugin 'motemen/git-vim'
 
+" javascript ATOM
+Bundle 'pangloss/vim-javascript'
+Bundle 'mustache/vim-mustache-handlebars'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

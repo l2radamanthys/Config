@@ -1,0 +1,2 @@
+instalar:
+	@cp .vimrc ~/.vimrc
