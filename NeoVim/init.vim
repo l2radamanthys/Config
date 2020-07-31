@@ -1,9 +1,11 @@
 " -----------------------------------------------------------------------------
-" Instalar plugins aqui
+" Instalar plugins aquí
 " -----------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'arielrossanigo/dir-configs-override.vim'  " Vim proyect custom config
 Plug 'editorconfig/editorconfig-vim'
+Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'                 " sopote extendido para varios lenguajes
 Plug 'valloric/MatchTagAlways'              " resaltar par etiquetas html
@@ -11,14 +13,21 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                     " fuzzi finder
 Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars
 
+Plug 'vim-airline/vim-airline'              " Airline status ba             
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'ryanoasis/vim-devicons'
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
-" Configuracion del Editor
+" Configuracion General
 " -----------------------------------------------------------------------------
 syntax on
 " set anti enc=utf-8
 set fileencoding=utf-8                      " codificacion de texto<Paste>
+set encoding=UTF-8
 
 set tabstop=4                               " tamaño tabulacion
 set shiftwidth=4                            " identacion tamaño y que sea automatica
@@ -31,7 +40,8 @@ set nowrap                                  " desactiva el cortado de linea
 " highlight ColorColumn guibg=Gray8           " color de la columna 80
 set cursorline
 set number                                  " mostrar numero de linea
-set guifont=Menlo\ 12                       " configurar fuente del editor
+" set guifont=Menlo\ 12                       " configurar fuente del editor
+set guifont=Meslo\ Nerd\ Font\ 12
 set helplang=es                             " lenguaje de la Ayuda
 
 colorscheme rDark.1.1                       " Tema de colores
@@ -52,27 +62,41 @@ set nohlsearch                              " no resaltar los resultados de la b
 " set title                                   " mostrar la ruta completa del archivo que se edita
 set undolevels=500                          " deshacer casi infinito
 
-set guitablabel=\[%N\]\ %t\ %M
+" set guitablabel=\[%N\]\ %t\ %M
+set guitablabel=%t
 au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la ventana al abrir vim
-
 
 " -----------------------------------------------------------------------------
 " Configuracion de la barra de estado
 " -----------------------------------------------------------------------------
 hi StatusLine guibg=gray ctermbg=gray
 set laststatus=2                            " barra de estado siempre visible
-set statusline =Archivo:\ %t
-set statusline +=\ T:\ %y\ LB:\ [%{&ff}]    " tipo y codificacion 
-set statusline +=\ Bufer:\ %n
+" set statusline =Archivo:\ %t
+" set statusline +=\ T:\ %y\ LB:\ [%{&ff}]    " tipo y codificacion 
+" set statusline +=\ Bufer:\ %n
 " right align
-set statusline +=%=
-set statusline +=\ Linea:\ %04l\ de:\ %04L\ \ |
+" set statusline +=%=
+" set statusline +=\ Linea:\ %04l\ de:\ %04L\ \ |
+" Deshabilitado para usar #Airline
 
 " -----------------------------------------------------------------------------
 " MAPEO DE TECLAS GENERALES
 " -----------------------------------------------------------------------------
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
+
+nmap _nt tabn                           " Moverse entre tabs
+nmap _pt tabp
+nmap _ft tabfirst
+nmap _lt tablast
+
+map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
+map <A-Right> :tabn<CR>               
+
+map <C-n> :NERDTreeToggle<CR>           " Mapeo de teclas
+map <C-p> :GFiles<CR>                   " Abrir Fzf 
+
+
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
@@ -86,10 +110,76 @@ let NERDTreeMinimalUI=1
 let NERDTreeMapOpenInTab='<ENTER>'
 let NERDTreeDirArrows=1
 " let g:netrw_sort_sequence='\.c$,\.h$,*'<Paste>
-map <C-n> :NERDTreeToggle<CR>           " Mapeo de teclas
 
 
 " -----------------------------------------------------------------------------
 " Configuracion de fzf
 " -----------------------------------------------------------------------------
-map <C-p> :GFiles<CR> 
+" pass
+
+" -----------------------------------------------------------------------------
+" Configuracion de Airline
+" -----------------------------------------------------------------------------
+" let g:airline_theme='minimalist'
+" let g:airline_theme='luna'
+" let g:airline_theme='sol'
+let g:airline_theme='bubblegum'
+let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let fancy_symbols_enabled = 0
+if fancy_symbols_enabled
+    let g:webdevicons_enable = 1
+
+    " custom airline symbols
+    if !exists('g:airline_symbols')
+       let g:airline_symbols = {}
+    endif
+
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = '⭠'
+    let g:airline_symbols.readonly = '⭤'
+    let g:airline_symbols.linenr = '⭡'
+else
+    let g:webdevicons_enable = 0
+endif
+
+
+" unicode symbols
+" let g:airline_left_sep = '»'
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '«'
+" let g:airline_right_sep = '◀'
+" let g:airline_symbols.linenr = '␊'
+" let g:airline_symbols.linenr = '␤'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.paste = 'Þ'
+" let g:airline_symbols.paste = '∥'
+" let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_symbols.branch = ''
+" let g:airline_symbols.readonly = ''
+" let g:airline_symbols.linenr = ''
+
+" -----------------------------------------------------------------------------
+" Comandos personalizados
+" -----------------------------------------------------------------------------
+command Cdw execute "cd ~/Workspace"
+command Cdp execute "cd ~/Workspace/Python"
+command Cde execute "cd ~/Workspace/EmberJs"
+command ReloadCfg execute "so ~/.config/nvim/init.vim"
+command OpenCfg execute "e ~/.config/nvim/init.vim"
+
