@@ -46,7 +46,7 @@ Si no tiene instalado **pip** instalar antes con:
 
 ### Instalar Soporte node
 
-	npm install -g neovin
+	npm install -g neovim
 
 ### Comprobar la instalación
 
