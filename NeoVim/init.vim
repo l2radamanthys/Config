@@ -6,18 +6,35 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'arielrossanigo/dir-configs-override.vim'  " Vim proyect custom config
 Plug 'editorconfig/editorconfig-vim'
 Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'                 " sopote extendido para varios lenguajes
 Plug 'valloric/MatchTagAlways'              " resaltar par etiquetas html
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                     " fuzzi finder
+Plug 'https://gist.github.com/drasill/ff9b94025dc8aa7e404f',
+    \ { 'dir': g:plug_home.'/vim-fzf-git-ls-files/plugin', 'rtp': '..' }
+
 Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars
 
 Plug 'vim-airline/vim-airline'              " Airline status ba             
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'               " devicons para varias cosas
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+
+Plug 'Yggdroot/indentLine'                " mostrar identacion
+" Plug 'taglist.vim'
+Plug 'majutsushi/tagbar'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/context_filetype.vim'
+
+Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-surround'
+
+Plug 'lilydjwg/colorizer'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -29,9 +46,14 @@ syntax on
 set fileencoding=utf-8                      " codificacion de texto<Paste>
 set encoding=UTF-8
 
+filetype plugin on
+filetype indent on
+
+set ls=2
+
+set expandtab                               " insertar espacios en lugar de <Tab>s
 set tabstop=4                               " tamaño tabulacion
 set shiftwidth=4                            " identacion tamaño y que sea automatica
-set expandtab                               " insertar espacios en lugar de <Tab>s
 retab     
 set autoindent
 set nowrap                                  " desactiva el cortado de linea
@@ -52,6 +74,7 @@ set backspace=eol,start,indent
 
 set mouse=a
 set showmode
+set showcmd
 set nobackup
 set noswapfile
 set ruler
@@ -61,10 +84,13 @@ set ignorecase                              " ignora mayusculas y minusculas en 
 set nohlsearch                              " no resaltar los resultados de la busqueda esto marea
 " set title                                   " mostrar la ruta completa del archivo que se edita
 set undolevels=500                          " deshacer casi infinito
+set lcs+=space:·
 
 " set guitablabel=\[%N\]\ %t\ %M
 set guitablabel=%t
 au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la ventana al abrir vim
+
+set fillchars+=vert:\ 
 
 " -----------------------------------------------------------------------------
 " Configuracion de la barra de estado
@@ -93,24 +119,51 @@ nmap _lt tablast
 map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
 map <A-Right> :tabn<CR>               
 
-map <C-n> :NERDTreeToggle<CR>           " Mapeo de teclas
-map <C-p> :GFiles<CR>                   " Abrir Fzf 
-
-
+" Mapeo de teclas
+map <F2> :NERDTreeToggle<CR>
+map <F3> :TagbarToggle<CR>
+" Abrir Fzf 
+map <C-p> :GFiles<CR>
+map ,e :Files<CR>
+map tt :tabnew<CR>
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
 " -----------------------------------------------------------------------------
 let NERDTreeHighlightCursorline=1
-let NERDTreeStatusline='-- Ficheros --'
-let NERDTreeIgnore=['\.pyc$','\.back$', '\~$','\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc', '\.js.map', '__pycache__']
+" let NERDTreeStatusline='-- Ficheros --'
+let NERDTreeIgnore=['\.pyc$','\.back$', '\~$', '\.swp$', '\.exe$', '\.aux$', '\.log$', '\.out$', '\.toc', '\.js.map', '__pycache__']
 let NERDTreeAutoCenterThreshold=1
 let NERDTreeMinimalUI=1
 " let NERDTreeMapOpenInTab='<2-LeftMouse>'
 let NERDTreeMapOpenInTab='<ENTER>'
-let NERDTreeDirArrows=1
+" let NERDTreeDirArrows=1
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let NERDTreeDirArrowExpandable = "\u00a0"
+let NERDTreeDirArrowCollapsible = "\u00a0"
+let NERDTreeNodeDelimiter = "\x07"
 " let g:netrw_sort_sequence='\.c$,\.h$,*'<Paste>
 
+" -----------------------------------------------------------------------------
+" Neoplete
+" -----------------------------------------------------------------------------
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({
+\   'ignore_case': v:true,
+\   'smart_case': v:true,
+\})
+" complete with words from any opened file
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
+
+set completeopt+=noinsert
+set completeopt-=preview
+set wildmode=list:longest
+
+
+" Jedi-vim
+let g:jedi#completions_enabled = 0
 
 " -----------------------------------------------------------------------------
 " Configuracion de fzf
@@ -130,7 +183,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-let fancy_symbols_enabled = 0
+let fancy_symbols_enabled = 1
 if fancy_symbols_enabled
     let g:webdevicons_enable = 1
 
