@@ -59,3 +59,41 @@ Si no tiene instalado **pip** instalar antes con:
 Si se encuentra en el directorio de este archivo tambien puede ejecutar el alias 
 	
 	make status 
+	
+	
+## Personalización
+
+Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` si, no existe crearlo, copiar los archivos de este directorio ahi. 
+
+	cp init.vim ~/.config/nvim/init.vim
+	cp ./autoload ~/.config/nvim/autoload
+	cp ./colors ~/.config/nvim/colors
+	
+Abrir neovim e instalar paquetes
+
+	nvm
+	:PlugInstall
+	
+## Nerd Fonts
+
+Algunos complementos necesitan que se setee la fuente o que se defina en consola la fuente de Nerd Font, descargar desde https://github.com/ryanoasis/nerd-fonts, sugeridas
+	
+- Meslo
+- Source Code Pro
+
+Descomprima los archivos y copie el contenido dentro de  `~/.fonts`
+
+Ejecutar el siguiente comando para actualizar cache de fuentes
+
+	fc-cache -fv
+	
+
+
+
+
+
+
+
+
+
+
