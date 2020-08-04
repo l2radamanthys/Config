@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'                     " fuzzi finder
 Plug 'https://gist.github.com/drasill/ff9b94025dc8aa7e404f',
     \ { 'dir': g:plug_home.'/vim-fzf-git-ls-files/plugin', 'rtp': '..' }
 
+Plug 'ctrlpvim/ctrlp.vim'
+
 Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars
 
 Plug 'vim-airline/vim-airline'              " Airline status ba             
@@ -36,6 +38,13 @@ Plug 'tpope/vim-surround'
 Plug 'lilydjwg/colorizer'
 Plug 'mattn/emmet-vim'
 
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" Plug 'Quramy/tsuquyomi'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -50,6 +59,7 @@ filetype plugin on
 filetype indent on
 
 set ls=2
+set hidden                                  " cambiar de buffer sin guardar
 
 set expandtab                               " insertar espacios en lugar de <Tab>s
 set tabstop=4                               " tamaño tabulacion
@@ -66,7 +76,8 @@ set number                                  " mostrar numero de linea
 set guifont=Meslo\ Nerd\ Font\ 12
 set helplang=es                             " lenguaje de la Ayuda
 
-colorscheme rDark.1.1                       " Tema de colores
+" colorscheme rDark.1.1                       " Tema de colores
+colorscheme wyrven                          " Tema de colores
 
 " set autochdir                               " cambia el directorio actual al archivo abierto
 autocmd BufEnter * silent! lcd %:p:h
@@ -87,10 +98,13 @@ set undolevels=500                          " deshacer casi infinito
 set lcs+=space:·
 
 " set guitablabel=\[%N\]\ %t\ %M
-set guitablabel=%t
+" set guitablabel=%t
 au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la ventana al abrir vim
 
 set fillchars+=vert:\ 
+
+
+
 
 " -----------------------------------------------------------------------------
 " Configuracion de la barra de estado
@@ -116,16 +130,23 @@ nmap _pt tabp
 nmap _ft tabfirst
 nmap _lt tablast
 
-map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
-map <A-Right> :tabn<CR>               
+" map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
+" map <A-Right> :tabn<CR>               
+map <A-Right> :bnext<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
+map <A-Left> :bprevious<CR>               
 
 " Mapeo de teclas
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
 " Abrir Fzf 
-map <C-p> :GFiles<CR>
+map ,p :GFiles<CR>
 map ,e :Files<CR>
-map tt :tabnew<CR>
+map ,g :GFiles<CR>
+" map tt :tabnew<CR>
+map tt :enew<CR>
+
+map ,j :vertical resize -10<CR>
+map ,l :vertical resize +10<CR>
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
@@ -144,6 +165,12 @@ let NERDTreeDirArrowExpandable = "\u00a0"
 let NERDTreeDirArrowCollapsible = "\u00a0"
 let NERDTreeNodeDelimiter = "\x07"
 " let g:netrw_sort_sequence='\.c$,\.h$,*'<Paste>
+
+" -----------------------------------------------------------------------------
+" CtrlP
+" -----------------------------------------------------------------------------
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " -----------------------------------------------------------------------------
 " Neoplete
@@ -169,6 +196,28 @@ let g:jedi#completions_enabled = 0
 " Configuracion de fzf
 " -----------------------------------------------------------------------------
 " pass
+
+" Utilsnip
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsSnippetsDir = $HOME."/.config/nvim/my_snippets"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+
+
+" -----------------------------------------------------------------------------
+" Ident Line
+" -----------------------------------------------------------------------------
+let g:indentLine_enabled = 0
+let g:indentLine_faster = 1
+" let g:indentLine_char = '⎸'
+
+" Mostrar espacios
+" set list
+" set lcs=tab:>-,eol:$,space:.
 
 " -----------------------------------------------------------------------------
 " Configuracion de Airline
@@ -203,7 +252,6 @@ else
     let g:webdevicons_enable = 0
 endif
 
-
 " unicode symbols
 " let g:airline_left_sep = '»'
 " let g:airline_left_sep = '▶'
@@ -226,6 +274,12 @@ endif
 " let g:airline_symbols.branch = ''
 " let g:airline_symbols.readonly = ''
 " let g:airline_symbols.linenr = ''
+
+" TABS
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " -----------------------------------------------------------------------------
 " Comandos personalizados
