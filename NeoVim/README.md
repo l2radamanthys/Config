@@ -71,8 +71,25 @@ Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` s
 	
 Abrir neovim e instalar paquetes
 
-	nvm
+	nvim
 	:PlugInstall
+	
+## Otros
+
+## FZF
+
+### ag
+
+	sudo apt-get install silversearcher-ag
+
+### fd
+
+https://github.com/sharkdp/fd
+	
+### bat 
+Resaltado de sintaxis instalar el paquete .deb desde https://github.com/sharkdp/bat/releases
+
+
 	
 ## Nerd Fonts
 
