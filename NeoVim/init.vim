@@ -131,9 +131,11 @@ nmap _ft tabfirst
 nmap _lt tablast
 
 " map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
-" map <A-Right> :tabn<CR>               
 map <A-Right> :bnext<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
+" map <A-Right> :tabn<CR>               
 map <A-Left> :bprevious<CR>               
+" map tt :tabnew<CR>
+map tt :enew<CR>
 
 " Mapeo de teclas
 map <F2> :NERDTreeToggle<CR>
@@ -142,8 +144,7 @@ map <F3> :TagbarToggle<CR>
 map ,p :GFiles<CR>
 map ,e :Files<CR>
 map ,g :GFiles<CR>
-" map tt :tabnew<CR>
-map tt :enew<CR>
+nnoremap <C-f> :FZF<CR>
 
 map ,j :vertical resize -10<CR>
 map ,l :vertical resize +10<CR>
@@ -195,9 +196,16 @@ let g:jedi#completions_enabled = 0
 " -----------------------------------------------------------------------------
 " Configuracion de fzf
 " -----------------------------------------------------------------------------
-" pass
+" FZF key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-i': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
+
+" -----------------------------------------------------------------------------
 " Utilsnip
+" -----------------------------------------------------------------------------
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"

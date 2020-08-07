@@ -1,0 +1,54 @@
+
+snippet ,service "import service" b
+import { inject as service } from "@ember/service";
+endsnippet
+
+snippet ,task "inport task" b
+import { task } from "ember-concurrency";
+endsnippet
+
+snippet ,computed "import computed" b
+import { computed } from "@ember/object";
+endsnippet
+
+snippet actions "actions" b
+actions: {
+  ${0}
+},
+endsnippet
+
+snippet tagName "tagName" b
+tagName: "",
+endsnippet
+
+snippet computed "computed function" b
+computed('${0}', function() {
+  ${1}
+}),
+endsnippet
+
+snippet observer "observer function" b
+observer('${0}', function() {
+  ${1}
+}),
+endsnippet
+
+snippet model "model() definition" b
+model() {
+  ${0}
+},
+endsnippet
+
+snippet afterModel "afterModel()" b
+afterModel() {
+  ${0}
+},
+endsnippet
+
+snippet didInserElement "didInserElement()" b
+didIn}erElement() {
+  this.__super(...arguments);
+  ${0}
+},
+endsnippet
+
