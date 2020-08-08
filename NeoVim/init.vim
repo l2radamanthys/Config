@@ -1,6 +1,8 @@
 " -----------------------------------------------------------------------------
 " Instalar plugins aquí
 " -----------------------------------------------------------------------------
+let mapleader=","
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'arielrossanigo/dir-configs-override.vim'  " Vim proyect custom config
@@ -11,10 +13,11 @@ Plug 'valloric/MatchTagAlways'              " resaltar par etiquetas html
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                     " fuzzi finder
-Plug 'https://gist.github.com/drasill/ff9b94025dc8aa7e404f',
-    \ { 'dir': g:plug_home.'/vim-fzf-git-ls-files/plugin', 'rtp': '..' }
+" Plug 'https://gist.github.com/drasill/ff9b94025dc8aa7e404f',
+"     \ { 'dir': g:plug_home.'/vim-fzf-git-ls-files/plugin', 'rtp': '..' }
+Plug 'airblade/vim-rooter'
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars
 
@@ -38,11 +41,15 @@ Plug 'tpope/vim-surround'
 Plug 'lilydjwg/colorizer'
 Plug 'mattn/emmet-vim'
 
+Plug 'pangloss/vim-javascript'
+" Plug "rstacruz/sparkup"
+
 " Track the engine.
 Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
+Plug 'tomasiser/vim-code-dark'                  " VSCodeDark theme
 " Plug 'Quramy/tsuquyomi'
 
 call plug#end()
@@ -103,9 +110,6 @@ au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la v
 
 set fillchars+=vert:\ 
 
-
-
-
 " -----------------------------------------------------------------------------
 " Configuracion de la barra de estado
 " -----------------------------------------------------------------------------
@@ -122,6 +126,7 @@ set laststatus=2                            " barra de estado siempre visible
 " -----------------------------------------------------------------------------
 " MAPEO DE TECLAS GENERALES
 " -----------------------------------------------------------------------------
+
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
 
@@ -141,13 +146,18 @@ map tt :enew<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
 " Abrir Fzf 
-map ,p :GFiles<CR>
-map ,e :Files<CR>
-map ,g :GFiles<CR>
-nnoremap <C-f> :FZF<CR>
+map <Leader>p :GFiles<CR>
+map <Leader>e :Files<CR>
+map <Leader>g :GFiles<CR>
+map <Leader>b :Ag<CR>
+" nnoremap <C-f> :FZF<CR>
+map <Leader>j :vertical resize -10<CR>
+map <Leader>l :vertical resize +10<CR>
 
-map ,j :vertical resize -10<CR>
-map ,l :vertical resize +10<CR>
+" borra todos los espacios en blanco
+map <Leader>cs :%s/\s\+$//e<CR>    
+" copiar al portapapeles
+map <Leader>c "+y
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
@@ -170,8 +180,8 @@ let NERDTreeNodeDelimiter = "\x07"
 " -----------------------------------------------------------------------------
 " CtrlP
 " -----------------------------------------------------------------------------
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
 
 " -----------------------------------------------------------------------------
 " Neoplete
@@ -189,8 +199,9 @@ set completeopt+=noinsert
 set completeopt-=preview
 set wildmode=list:longest
 
-
+" -----------------------------------------------------------------------------
 " Jedi-vim
+" -----------------------------------------------------------------------------
 let g:jedi#completions_enabled = 0
 
 " -----------------------------------------------------------------------------
@@ -201,7 +212,6 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-i': 'split',
   \ 'ctrl-v': 'vsplit' }
-
 
 " -----------------------------------------------------------------------------
 " Utilsnip
@@ -214,7 +224,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 " let g:UltiSnipsSnippetsDir = $HOME."/.config/nvim/my_snippets"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
-
 
 " -----------------------------------------------------------------------------
 " Ident Line
