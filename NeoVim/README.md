@@ -43,7 +43,6 @@ Si no tiene instalado **pip** instalar antes con:
 
 	sudo apt-get install python-pip python3-pip
 
-
 ### Instalar Soporte node
 
 	npm install -g neovim
@@ -52,7 +51,7 @@ Si no tiene instalado **pip** instalar antes con:
 
 	nvim
 
-## Revisar Dependencias
+### Revisar Dependencias
 
 	nvim +checkhealth
 	
@@ -60,8 +59,7 @@ Si se encuentra en el directorio de este archivo tambien puede ejecutar el alias
 	
 	make status 
 	
-	
-## Personalización
+### Personalización
 
 Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` si, no existe crearlo, copiar los archivos de este directorio ahi. 
 
@@ -84,16 +82,16 @@ Abrir neovim e instalar paquetes
 
 ### fd
 
-https://github.com/sharkdp/fd
+[Fd Repositorio](https://github.com/sharkdp/fd)
 	
 ### bat 
-Resaltado de sintaxis instalar el paquete .deb desde https://github.com/sharkdp/bat/releases
+Resaltado de sintaxis instalar el paquete [*.deb](https://github.com/sharkdp/bat/releases)
 
 
 	
 ## Nerd Fonts
 
-Algunos complementos necesitan que se setee la fuente o que se defina en consola la fuente de Nerd Font, descargar desde https://github.com/ryanoasis/nerd-fonts, sugeridas
+Algunos complementos necesitan que se setee la fuente o que se defina en consola la fuente de Nerd Font, descargar desde [Repositorio Nerd Fonts](https://github.com/ryanoasis/nerd-fonts), sugeridas
 	
 - Meslo
 - Source Code Pro
@@ -105,7 +103,9 @@ Ejecutar el siguiente comando para actualizar cache de fuentes
 	fc-cache -fv
 	
 
+## Instalación en Windows
 
+Requiere tener git instalado
 
 
 
