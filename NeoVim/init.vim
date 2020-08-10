@@ -85,7 +85,7 @@ set helplang=es                             " lenguaje de la Ayuda
 
 " colorscheme rDark.1.1                       " Tema de colores
 colorscheme wyrven                          " Tema de colores
-set termguicolor
+set termguicolors
 
 " set autochdir                               " cambia el directorio actual al archivo abierto
 autocmd BufEnter * silent! lcd %:p:h
