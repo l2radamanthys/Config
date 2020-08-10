@@ -78,13 +78,16 @@ Abrir neovim e instalar paquetes
 
 ## FZF
 
+Fuzzi file finder.
+
 ### ag
 
 	sudo apt-get install silversearcher-ag
 
 ### fd
 
-https://github.com/sharkdp/fd
+[Repositorio](https://github.com/sharkdp/fd) descargar el archivo [*.dev](https://github.com/sharkdp/fd/releases)
+
 	
 ### bat 
 Resaltado de sintaxis instalar el paquete .deb desde https://github.com/sharkdp/bat/releases
