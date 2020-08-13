@@ -34,6 +34,7 @@ Plug 'majutsushi/tagbar'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/context_filetype.vim'
+Plug 'deoplete-plugins/deoplete-jedi'
 
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-surround'
@@ -156,7 +157,7 @@ map <Leader>j :vertical resize -10<CR>
 map <Leader>l :vertical resize +10<CR>
 
 " borra todos los espacios en blanco
-map <Leader>cs :%s/\s\+$//e<CR>    
+map <Leader>sc :%s/\s\+$//e<CR>    
 " copiar al portapapeles
 map <Leader>c "+y
 

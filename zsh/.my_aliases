@@ -25,8 +25,9 @@ alias ,info='cat ~/.my_aliases | grep'
 alias ,i='cat ~/.my_aliases | grep'
 
 # Alias de debian
-alias ,actualizar='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
-alias ,menu='cat /etc/X11/WindowMaker/menu.hook'
+# alias ,actualizar-u='sudo apt-get update ; unstable upgrade; sudo aptitude dist-upgrade -y ; sudo apt-get clean'
+alias ,update='sudo apt update'
+# alias ,menu='cat /etc/X11/WindowMaker/menu.hook'
 
 # Alias para los editores
 
@@ -75,19 +76,29 @@ alias ,env-rm='rm -fr env'
 
 # Alias EmberJs
 alias ,emb='ember'
-alias ,enber='ember'
+alias enber='ember'
 alias ,emb-s='ember s' # server app
 alias ,emb-gr='ember g route'
 alias ,emb-gm='ember g model'
 alias ,emb-gc='ember g component'
 alias ,emb-gct='ember g controller'
 alias ,emb-ga='ember g adapter'
+alias ,emb-gh='ember g helper'
+alias ,emb-d='ember d'
 
 #alias node angular cli 
 alias ,ng-s='ng serve'
 alias ,ng-b='ng build --prod'
 alias ,ng-gc='ng generate component'
 alias ,ng-gs='ng generate service'
+
+# cambiar version de node activa
+alias ,node10='nvm use v10'
+alias ,node8='nvm use v8'
+alias ,node12='nvm use v12'
+
+#Vue
+alias ,vue-run='npm run dev'
 
 # Alias Git
 alias ,git-reset='git reset --hard HEAD'
@@ -122,18 +133,21 @@ alias ,gg='git pull origin'
 alias ,gp='git push origin'
 alias ,gs='git status'
 alias ,ga='git add .'
-alias ,gr='git reset --hard HEAD'
+# alias ,gr='git reset --hard HEAD'
 
 # Alias Configuracion
 alias ,esh='vim ~.bashrc'  #editar este archivo
 alias ,ezsh='vim ~/.zshrc'
 alias ,ealias='vim ~/.my_aliases'
 alias ,edoc='vim ~/.alias_doc'
+alias ,man='cat ~/.my_aliases | grep'
 alias ,evim='vim ~/.vimrc'
 
 # Alias Editores
-alias vi='vi'
+alias ,vi='vim'
 alias vim='gvim'
+# alias ,vim='vim.gtk3'
+alias ,vim='gvim'
 alias ge='gedit'
 alias ,leaf='leafpad'
 alias ,suge='sudo gedit'
@@ -155,6 +169,7 @@ alias ,dbox-r='dropbox stop && dbus-launch dropbox start'
 alias ,dbox-s='dropbox stop'
 alias ,dbox-i='dropbox start'
 alias ,corber-build='corber proxy run android —device' 
+alias ,ngrok='~/ngrok/ngrok'
 
 # Alias para Directorios
 alias hdir='cd /home; pwd'
@@ -175,14 +190,21 @@ alias ,root='su' #cambia al usuario root
 alias ,postgress='sudo -i -u postgres'  #cambia al usuario postgres
 alias ,psqls='sudo -u postgres psql'  #cambia al usuario postgres
 
-alias ,postgres-start='service postgresql start'
-alias ,pg-start='service postgresql start'
-alias ,pg-s='service postgresql start'
-alias ,postgres-status='service postgresql status'
-alias ,pg-status='service postgresql status'
-alias ,pg-i='service postgresql status'
-alias ,postgres-stop='service postgresql stop'
-alias ,pg-stop='service postgresql stop'
+alias ,postgres-start='sudo systemctl start postgresql'
+alias ,pg-start='sudo systemctl start postgresql'
+alias ,pg-s='sudo systemctl start postgresql'
+alias ,postgres-status='sudo systemctl status postgresql'
+alias ,pg-status='sudo systemctl status postgresql'
+alias ,pg-i='sudo systemctl status postgresql'
+alias ,postgres-stop='sudo systemctl stop postgresql'
+alias ,pg-stop='sudo systemctl stop postgresql'
+alias ,pg-restart='sudo systemctl restart postgresql'
+alias ,pg-r='sudo systemctl restart postgresql'
+# alias ,pg-kpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgress\';"' #pass defecto
+# alias ,pg-rpass='psql -c "ALTER USER postgres WITH PASSWORD \'postgres\';"' #pass korolev
+
+alias ,redis-stop='sudo systemctl stop redis-server.service' 
+alias ,redis-start='sudo systemctl start redis-server.service' 
 
 alias ,mongo-start='service mongod start'
 alias ,mongo-status='service mongod status'
@@ -211,24 +233,27 @@ alias ,trans='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 alias ,ts='python3 ~/Workspace/Python/TkTranslate/translate-command.py'
 alias ,marcar='echo `date +%Y-%m-%d %H:%M "$1" > ~/Workspace/horarios'
 
-# systemctl
-alias ,service='sudo systemctl'
-alias ,sys-status='sudo systemctl status'
-alias ,sys-stop='sudo systemctl stop'
-alias ,sys-start='sudo systemctl start'
-alias ,sys-restart='sudo systemctl restart'
-alias ,sys-enablr='sudo systemctl enable'
-alias ,sys-disable='sudo systemctl disable'
-alias ,sys-is-enable='sudo systemctl is-enable'
-alias ,sys-is-failed='sudo systemctl is-failed'
-alias ,sys-is-active='sudo systemctl is-active'
+alias ,start='systemctl start'
+alias ,stop='systemctl stop'
+alias ,restart='systemctl restart'
+alias ,reload='systemctl reload'
+alias ,status='systemctl status'
+alias ,enable='systemctl enable'
+alias ,disable='systemctl disable'
+alias ,is-enabled='systemctl is-enabled'
+alias ,is-active='systemctl is-active'
+alias ,show='systemctl show'
+alias ,mask='systemctl mask'
+alias ,unmask='systemctl unmask'
 
 # Docker
-alias doker='docker'
-alias ,docker-start='sudo systemctl start docker'
-alias ,docker-restart='sudo systemctl restart docker'
-alias ,docker-stop='sudo systemctl stop docker'
-alias ,docker-status='sudo systemctl status docker'
+alias doker=docker
+alias ,dok-containers='docker container ls'
+alias ,dok-images='docker image ls'
+alias ,dok-stop='docker stop'
+alias ,dok-cont='docker container'
+alias ,dok-build='docker build'
+alias ,dok-run='docker run -d'
 
 # Varios
 alias reiniciar='sudo reboot -r now'

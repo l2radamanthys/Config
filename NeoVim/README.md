@@ -27,12 +27,12 @@ Instalar version GTK
 
 	sudo python3 -m pip install neovim
 	sudo python -m pip install neovim
-
+	
 ó
 
 	sudo pip3 install neovim
 	sudo pip install neovim
-
+	pip3 install -e git://github.com/davidhalter/jedi.git#egg=jedi:
 
 En caso que quiera actualizar a la version mas nueva:
 

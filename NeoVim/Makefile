@@ -17,5 +17,5 @@ install:
 
 backup:
 	@cp ~/.config/nvim/init.vim init.vim
-	@cp -r ~/.config/nvim/my_snippets my_snippets
+#	@cp ~/.config/nvim/my_snippets ./my_snippets
 
