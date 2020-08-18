@@ -1,5 +1,10 @@
 comandos:
 	@echo "COMANDOS"
+	@echo ""
+	@echo "install"
+	@echo "diff_config"
+	@echo "diff_alias"
+	@echo ""
 
 install:
 	@cp .zshrc ~/.zshrc

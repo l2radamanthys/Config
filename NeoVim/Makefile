@@ -4,6 +4,7 @@ comandos:
 	@echo "    status"
 	@echo "    install"
 	@echo "    backup"
+	@echo "    diff"
 	@echo ""	
 
 status:
@@ -19,3 +20,5 @@ backup:
 	@cp ~/.config/nvim/init.vim init.vim
 #	@cp ~/.config/nvim/my_snippets ./my_snippets
 
+diff:
+	@diffuse init.vim ~/.config/nvim/init.vim
