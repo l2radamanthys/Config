@@ -95,8 +95,8 @@ set backspace=eol,start,indent
 set mouse=a
 set showmode
 set showcmd
-set nobackup
-set noswapfile
+" set nobackup
+" set noswapfile
 set ruler
 set showcmd
 
