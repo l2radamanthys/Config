@@ -18,8 +18,7 @@ Plug 'junegunn/fzf.vim'                     " fuzzi finder
 Plug 'airblade/vim-rooter'
 
 " Plug 'ctrlpvim/ctrlp.vim'
-
-Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars
+" Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars incluido en polyglot
 
 Plug 'vim-airline/vim-airline'              " Airline status ba             
 Plug 'vim-airline/vim-airline-themes'
@@ -34,6 +33,7 @@ Plug 'majutsushi/tagbar'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/context_filetype.vim'
+Plug 'deoplete-plugins/deoplete-jedi'
 
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-surround'
@@ -51,6 +51,11 @@ Plug 'honza/vim-snippets'
 
 Plug 'tomasiser/vim-code-dark'                  " VSCodeDark theme
 " Plug 'Quramy/tsuquyomi'
+
+Plug 'xolox/vim-misc'    
+Plug 'xolox/vim-session'    " vim session
+
+" Plug 'jeetsukumaran/vim-buffergator'
 
 call plug#end()
 
@@ -85,6 +90,7 @@ set helplang=es                             " lenguaje de la Ayuda
 
 " colorscheme rDark.1.1                       " Tema de colores
 colorscheme wyrven                          " Tema de colores
+set termguicolors
 
 " set autochdir                               " cambia el directorio actual al archivo abierto
 autocmd BufEnter * silent! lcd %:p:h
@@ -93,8 +99,8 @@ set backspace=eol,start,indent
 set mouse=a
 set showmode
 set showcmd
-set nobackup
-set noswapfile
+" set nobackup
+" set noswapfile
 set ruler
 set showcmd
 
@@ -150,12 +156,18 @@ map <Leader>p :GFiles<CR>
 map <Leader>e :Files<CR>
 map <Leader>g :GFiles<CR>
 map <Leader>b :Ag<CR>
+map <Leader>a :Buffers<CR>
 " nnoremap <C-f> :FZF<CR>
 map <Leader>j :vertical resize -10<CR>
 map <Leader>l :vertical resize +10<CR>
+map <Leader>v :vsplit<CR>
+map <Leader>q :bd<CR>
+map <Leader>w :<C-w><C-w><CR>
+map <Leader>h :set syntax=mustache<CR>
+" map <Leader>b :BuffergatorToggle<CR>
 
 " borra todos los espacios en blanco
-map <Leader>cs :%s/\s\+$//e<CR>    
+map <Leader>sc :%s/\s\+$//e<CR>    
 " copiar al portapapeles
 map <Leader>c "+y
 
@@ -235,6 +247,18 @@ let g:indentLine_faster = 1
 " Mostrar espacios
 " set list
 " set lcs=tab:>-,eol:$,space:.
+
+" -----------------------------------------------------------------------------
+" Vim-Session
+" -----------------------------------------------------------------------------
+" let g:session_autoload = 'prompt'
+let g:session_autoload = 'yes'
+let g:session_default_name = fnamemodify(getcwd(), ':t')
+let g:session_autosave = 'yes'
+
+"
+" Mustache Fix
+au BufReadPost *.hbs set syntax=mustache
 
 " -----------------------------------------------------------------------------
 " Configuracion de Airline
