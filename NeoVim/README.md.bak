@@ -84,8 +84,12 @@ Fuzzi file finder.
 
 ### fd
 
+<<<<<<< HEAD
+[Fd Repositorio](https://github.com/sharkdp/fd)
+=======
 [Repositorio](https://github.com/sharkdp/fd) descargar el archivo [*.dev](https://github.com/sharkdp/fd/releases)
 
+>>>>>>> 496527408817c536cad2b58a0f0b44b452242cf7
 	
 ### bat 
 Resaltado de sintaxis instalar el paquete [*.deb](https://github.com/sharkdp/bat/releases)
