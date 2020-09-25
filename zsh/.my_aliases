@@ -22,6 +22,7 @@ alias ,restore-zshrc='cp ~/Workspace/Config/zsh/.zshrc ~/.zshrc'
 alias ,backup-vimrc='cp ~/.vimrc ~/Workspace/Config/Vim/.vimrc'
 alias ,restore-vimrc='cp ~/Workspace/Config/Vim/.vimrc ~/.vimrc'
 alias ,info='cat ~/.my_aliases | grep'
+alias ,ealacritty='nvim ~/.config/alacritty/alacritty.yml'
 alias ,i='cat ~/.my_aliases | grep'
 
 # Alias de debian
