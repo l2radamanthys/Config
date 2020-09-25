@@ -1,27 +1,29 @@
-snippet if "agrega bloque if" b
-{{#if ${0} }}
-  ${1}
-{{/if}}
+snippet log "log" b
+{{log ${0} }}
 endsnippet
 
-snippet iif "agrega bloque if inline" b
-{{if ${0} ${1} }}
+snippet else "else stament" b
+{{ else }}
 endsnippet
 
-snippet unless "agrega bloque unless" b
-{{#unless ${0} }}
-  ${0}
-{{/unless}}
-endsnippet
-
-snippet for "agrega un bloque for" b
-{{#each ${0} as | ${1}}}
+snippet each "foreach block" b
+{{#each ${0} as |${1}|}}
   ${2}
 {{/each}}
 endsnippet
 
-snippet each "agrega un bloque for" b
-{{#each ${0} as | ${1}}}
+snippet iif "inline if" b
+{{if ${0} '${1}' '${2}' }}
+endsnippet
+
+snippet unless "agrega bloque unless" b
+{{#unless ${0} }}
+  ${1}
+{{/unless}}
+endsnippet
+
+snippet for "agrega un bloque for" b
+{{#each ${0} as |${1}|}}
   ${2}
 {{/each}}
 endsnippet
@@ -30,3 +32,6 @@ snippet {} "autocompleta el bloque" b
 {{ ${0} }}
 endsnippet
 
+snippet link-to "ember link" b
+{{#link-to "${0}" class="" }} ${1} {{/link-to}}
+endsnippet

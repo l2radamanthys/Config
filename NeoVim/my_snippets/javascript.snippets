@@ -11,6 +11,16 @@ snippet ,computed "import computed" b
 import { computed } from "@ember/object";
 endsnippet
 
+snippet ,observer "import computed" b
+import { observer } from "@ember/object";
+endsnippet
+
+snippet computed "def computed function" b
+computed("${0}", function() {
+	${1}
+}),
+endsnippet
+
 snippet actions "actions" b
 actions: {
   ${0}
@@ -27,9 +37,19 @@ computed('${0}', function() {
 }),
 endsnippet
 
+snippet log "console log" b
+console.log(${0});
+endsnippet
+
 snippet observer "observer function" b
 observer('${0}', function() {
   ${1}
+}),
+endsnippet
+
+snippet task_ "task function" b
+task(function *() {
+  ${0}
 }),
 endsnippet
 
@@ -45,10 +65,13 @@ afterModel() {
 },
 endsnippet
 
-snippet didInserElement "didInserElement()" b
-didIn}erElement() {
-  this.__super(...arguments);
+snippet didInsertElement "didInserElement()" b
+didInsertElement() {
+  this._super(...arguments);
   ${0}
 },
 endsnippet
 
+snippet fn "default function" b
+${0}() { ${1} },
+endsnippet
