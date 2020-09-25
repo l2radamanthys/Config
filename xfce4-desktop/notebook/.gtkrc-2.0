@@ -1,0 +1,45 @@
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
+
+include "/home/ricardo/.gtkrc-2.0.mine"
+gtk-theme-name="SURU++"
+gtk-icon-theme-name="ubuntu-mono-light"
+gtk-font-name="Ubuntu 11"
+gtk-cursor-theme-name="DMZ-White"
+gtk-cursor-theme-size=18
+gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"
+
+style "xfdesktop-icon-view" {
+    XfdesktopIconView::label-alpha = 0
+    XfdesktopIconView::selected-label-alpha = 100
+    XfdesktopIconVIew::ellipsize-icon-labels = 1
+  
+    XfdesktopIconView::shadow-x-offset = 1
+    XfdesktopIconView::shadow-y-offset = 1
+    XfdesktopIconView::shadow-color = "#000000"
+    XfdesktopIconView::selected-shadow-x-offset = 1
+    XfdesktopIconView::selected-shadow-y-offset = 1
+    XfdesktopIconView::selected-shadow-color = "#000000"
+  
+    XfdesktopIconView::cell-spacing = 0
+    XfdesktopIconView::cell-padding = 0
+    XfdesktopIconView::cell-text-width-proportion = 2
+  
+    base[NORMAL] = "#3F6BA4"
+    base[SELECTED] = "#3F6BA4"
+    base[ACTIVE] = "#3F6BA4"
+  
+    fg[NORMAL] = "#ffffff"
+    fg[SELECTED] = "#ffffff"
+    fg[ACTIVE] = "#ffffff"
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"

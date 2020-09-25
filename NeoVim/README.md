@@ -105,6 +105,9 @@ Ejecutar el siguiente comando para actualizar cache de fuentes
 
 	fc-cache -fv
 	
+## Jedi
+
+	pip3 install --user jedi
 
 ## Instalación en Windows
 

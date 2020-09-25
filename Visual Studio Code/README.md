@@ -1,5 +1,12 @@
-Configuracion Para Visual Studio Code
-=====================================
+# VSCode
+
+## Instalación
+
+### Linux/ubuntu
+
+	sudo snap install --classic code
+
+## Configuracion
 
 ubicacion
 
