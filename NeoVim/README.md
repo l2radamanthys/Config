@@ -4,7 +4,7 @@
 
 Agregar la PPA de Neovim
 
-	sudo add-apt-repository ppa:neovim-ppa/unstable
+	sudo add-apt-repository ppa:neovim-ppa/stable
 	
 Instalar
 	
