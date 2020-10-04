@@ -85,11 +85,6 @@ else
     echo 'error al cargar .my_aliases'
 fi
 
-# pyenv
-export PATH="/home/ricardo/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

@@ -1,5 +1,6 @@
 [Configuration]
-FontName=DejaVu Sans Mono 11
+BackgroundDarkness=0,900000
+FontName=MesloLGM Nerd Font Mono 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -12,7 +13,7 @@ MiscMenubarDefault=TRUE
 MiscMouseAutohide=FALSE
 MiscMouseWheelZoom=TRUE
 MiscToolbarDefault=FALSE
-MiscConfirmClose=TRUE
+MiscConfirmClose=FALSE
 MiscCycleTabs=TRUE
 MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
@@ -23,11 +24,14 @@ MiscCopyOnSelect=FALSE
 MiscShowRelaunchDialog=TRUE
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
-MiscSlimTabs=FALSE
+MiscSlimTabs=TRUE
 MiscNewTabAdjacent=FALSE
-ScrollingLines=10000
-ColorForeground=#dcdcdc
-ColorBackground=#2c2c2c
-ColorCursor=#dcdcdc
-ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff
+ColorForeground=#d7e3d7e3d7e3
+ColorCursor=#fcfce9e94f4f
+ColorPalette=rgb(9,3,0);rgb(219,45,32);rgb(1,162,82);rgb(188,143,67);rgb(60,128,157);rgb(161,106,148);rgb(181,228,244);rgb(165,162,162);rgb(92,88,85);rgb(219,45,32);rgb(1,162,82);rgb(253,237,2);rgb(103,200,242);rgb(161,106,148);rgb(181,228,244);rgb(216,216,216)
+ColorBackground=#07a32c644369
+ColorCursorUseDefault=FALSE
+ColorCursorForeground=#00008080ffff
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+TabActivityColor=#4e4e9a9a0606
 
