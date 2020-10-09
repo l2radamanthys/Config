@@ -1,0 +1,6 @@
+colorscheme novum
+
+augroup hbs_ft
+  au!
+  autocmd BufNewFile,BufRead *.hbs   set syntax=mustache
+augroup END
