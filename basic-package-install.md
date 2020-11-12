@@ -1,6 +1,24 @@
-
-    $ sudo apt-get install git zsh openbox obmenu obconf unrar unzip vim vim-gtk tint2 
-    $ sudo apt-get install chromium-browser curl wget
-    $ sudo apt-get install font-manager
-    $ sudo apt-get install inkscape
+# Paquetes base a Instalar
    
+	sudo apt-get install \
+		git diffuse \
+		zsh \
+		zip unzip rar unrar \
+		vim vim-gtk \
+		chromium-browser curl wget \
+		gimp inkscape krita font-manager \
+		leafpad \
+		pcmanfm lxterminal \
+		pencil2d \
+		filezilla \
+		audacious \
+		telegram-desktop \
+		snapd \
+		apt-get install silversearcher-ag
+
+
+## Instalar Paquete de iconos
+   
+   	sudo add-apt-repository ppa:tiheum/equinox
+   	sudo apt-get update
+   	sudo apt-get install faenza-icon-theme

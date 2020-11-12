@@ -7,13 +7,13 @@
 
      $ chsh -s `which zsh`
 
-
+> NOTA: para que surja efecto el cambio se requiere reiniciar.
 
 ## Instalar oh-my-zsh
   
     $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-or 
+ó
 
     $ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
