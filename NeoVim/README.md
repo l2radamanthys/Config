@@ -64,8 +64,8 @@ Si se encuentra en el directorio de este archivo tambien puede ejecutar el alias
 Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` si, no existe crearlo, copiar los archivos de este directorio ahi. 
 
 	cp init.vim ~/.config/nvim/init.vim
-	cp ./autoload ~/.config/nvim/autoload
-	cp ./colors ~/.config/nvim/colors
+	cp -r ./autoload ~/.config/nvim
+	cp -r ./colors ~/.config/nvim
 	
 Abrir neovim e instalar paquetes
 
