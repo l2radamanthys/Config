@@ -3,7 +3,7 @@ Configuración para el editor atom
 
 ## Configurar interfaz UI
 
-copiar el contenido de `styles.less`
+copiar el contenido de `styles.less` en `~/.atom/styles.less`
 
 ## Cambiar Estilo Theme
 
@@ -12,8 +12,12 @@ copiar el contenido de `styles.less`
     git clone git@github.com:l2radamanthys/wyrven-theme-syntax.git
     
 
-## Paquetes
+## Paquetes Recomendados
 
+* file-icons
+* pigments
 * atom-i18n
-* atom-virtualenv
-* 
+* atom-handlebars
+* editorconfig
+* ember-snippets
+* gtk-dark-theme
