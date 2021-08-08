@@ -46,6 +46,8 @@ Modificar el archivo `/etc/rc0.d` o ejecutar el comando
 
 	systemctrl  start|stop|restart|status postgres
 
+## instalar soporte python
 
+	sudo apt-get install libpq-dev python-dev python3-dev
 
 
