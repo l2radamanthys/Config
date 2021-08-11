@@ -1,4 +1,5 @@
 #Atom
+
 Configuración para el editor atom
 
 ## Configurar interfaz UI
@@ -9,8 +10,9 @@ copiar el contenido de `styles.less` en `~/.atom/styles.less`
 
 `Ctrl+Shift+P` y seleccionar `Generate Sintax Theme`, renombrar a `wyrven-sintax-theme` descargar el theme y copiar en la carpeta correspondiente reemplazando los archivos
 
+    cd ~/github
+    rm -fr wyrven-theme-syntax
     git clone git@github.com:l2radamanthys/wyrven-theme-syntax.git
-    
 
 ## Paquetes Recomendados
 
@@ -21,3 +23,4 @@ copiar el contenido de `styles.less` en `~/.atom/styles.less`
 * editorconfig
 * ember-snippets
 * gtk-dark-theme
+* atom-virtualenv

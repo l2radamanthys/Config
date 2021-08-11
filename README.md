@@ -21,7 +21,8 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 		snapd \
 		silversearcher-ag \
 		autokey-gtk \
-		build-essential
+		build-essential \
+		ubuntu-restricted-extras
 
 ### Instalar fuentes true type
 	
