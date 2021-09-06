@@ -22,7 +22,8 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 		silversearcher-ag \
 		autokey-gtk \
 		build-essential \
-		ubuntu-restricted-extras
+		ubuntu-restricted-extras \
+		thunar-archive-plugin
 
 ### Instalar fuentes true type
 	
