@@ -2,8 +2,8 @@
 
 ## Generar clave SSH
 
+	ssh-keygen -o
 	
-
 ## Permisos clave
 
 	chmod 400 ~/.ssh/id_rsa
