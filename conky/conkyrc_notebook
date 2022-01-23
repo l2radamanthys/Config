@@ -1,0 +1,116 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+--[[
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING for details
+
+Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright (c) 2005-2012 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+]]
+
+conky.config = {
+    use_xft = true,
+    font = 'DejaVu Sans:size=9',
+    alignment = 'top_right',
+    gap_x = 10,
+    gap_y = 50,
+	text_buffer_size = 2048,
+	update_interval = 1.0,
+	total_run_times = 0,
+	own_window = true,
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar',
+	double_buffer = true,
+	minimum_size = 100,
+	maximun_width = 220,
+	draw_shades = true,
+	draw_outline = false,
+    draw_borders = false,
+	stippled_borders = 0,
+	default_color = 'EFFBFF',
+	color1 = 'ADC6D6',
+	color2 = '315D7B',
+	color3 = '10354A',	
+    default_shade_color = 'black',
+    default_outline_color = 'grey',
+    own_window_colour = 'white',
+	no_buffers = true,
+	uppercase = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	override_utf8_locale = true,
+	use_spacer =  none
+}
+
+conky.text = [[
+${font DejaVu Sans:size=14}${color1}X${color2}UBUNTU
+$hr${font}
+${color grey}Kernel:$color ${alignr}${kernel}
+${color grey}Uptime:$color ${alignr}${uptime}
+${color grey}Frequency (in MHz):${alignr}$color $freq
+${color grey}Frequency (in GHz):${alignr}$color $freq_g
+
+${color2}SYSTEM  ${color1}${hr 1}
+
+${color grey}RAM Usage: ${alignr}$color $mem/$memmax - $memperc% 
+${membar 12}
+
+${color grey}Swap Usage: ${alignr}$color $swap/$swapmax - $swapperc% 
+${swapbar 12}
+
+$color CORE 0 ${color1}${cpubar cpu0 12}
+$color CORE 1 ${color1}${cpubar cpu1 12}
+$color CORE 2 ${color1}${cpubar cpu2 12}
+$color CORE 3 ${color1}${cpubar cpu3 12}
+$color CORE 4 ${color1}${cpubar cpu4 12}
+$color CORE 5 ${color1}${cpubar cpu5 12}
+
+${color grey}Processes:$color $processes  ${alignr}${color grey}Running:$color $running_processes
+
+${color2}DISK USAGE  ${color1}${hr 1}
+
+${color grey}Root: ${alignr}$color${fs_used /}/${fs_size /} 
+ ${fs_bar 12 /}
+ 
+ ${color grey}Home: ${alignr}$color${fs_used /home}/${fs_size /home} 
+ ${fs_bar 12 /home}
+
+${color2}GPU  ${color1}${hr 1}
+${color #FCAF3E}${exec nvidia-smi -i 0 --query-gpu=gpu_name --format=csv,noheader,nounits}
+${color1}Temperature ${alignr}${color} ${execi 60 nvidia-settings -query [gpu:0]/GPUCoreTemp -t} °C
+${color1}Utilization ${alignr}${color}${exec nvidia-smi -i 0 | grep % | cut -c 61-63} %
+${color1}VRAM Utilization ${alignr}${color} ${exec nvidia-smi -i 0| grep % | cut -c 37-40} MB
+${color1}Power Draw ${alignr}${color} ${exec nvidia-smi -i 0| grep % | cut -c 21-23} W
+
+${color2}NETWORK  ${color1}${hr 1}
+
+${color}${upspeedgraph wlp0s20f3 40,220 ADC6D6 10354A -l} 
+${color}Up:     ${alignr}${upspeed wlp0s20f3}KB/s
+${color}Total:  ${alignr}${totalup wlp0s20f3}
+
+${color}${downspeedgraph wlp0s20f3 40,220 ADC6D6 10354A -l}
+${color}Down:   ${alignr}${downspeed wlp0s20f3}KB/s
+${color}Total:  ${alignr}${totaldown wlp0s20f3}
+
+${color2}BATTERY  ${color1}${hr 1}
+
+CHARGE ${alignc}${battery_bar 12,140 BAT1} ${alignr}${battery_percent BAT1}%
+]]
+
