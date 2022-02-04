@@ -95,9 +95,10 @@ alias ,ng-gc='ng generate component'
 alias ,ng-gs='ng generate service'
 
 # cambiar version de node activa
-alias ,node10='nvm use v10'
 alias ,node8='nvm use v8'
+alias ,node10='nvm use v10'
 alias ,node12='nvm use v12'
+alias ,node14='nvm use v14'
 
 #Vue
 alias ,vue-run='npm run dev'
