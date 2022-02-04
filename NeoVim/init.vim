@@ -57,6 +57,8 @@ Plug 'xolox/vim-session'    " vim session
 
 " Plug 'jeetsukumaran/vim-buffergator'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -116,6 +118,14 @@ au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la v
 
 set fillchars+=vert:\ 
 
+set title
+set titlestring=NeoVim:\ %-25.55F\ %a%r%m titlelen=70
+
+
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+" let g:node_host_prog = '/home/ricardo/.nvm/versions/node/v10.17.0/lib/node_modules'
+
 " -----------------------------------------------------------------------------
 " Configuracion de la barra de estado
 " -----------------------------------------------------------------------------
@@ -170,6 +180,7 @@ map <Leader>h :set syntax=mustache<CR>
 map <Leader>sc :%s/\s\+$//e<CR>    
 " copiar al portapapeles
 map <Leader>c "+y
+map <Leader>r :!python3 %:p<CR>
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
@@ -214,7 +225,7 @@ set wildmode=list:longest
 " -----------------------------------------------------------------------------
 " Jedi-vim
 " -----------------------------------------------------------------------------
-let g:jedi#completions_enabled = 0
+" let g:jedi#completions_enabled = 0
 
 " -----------------------------------------------------------------------------
 " Configuracion de fzf
@@ -247,6 +258,13 @@ let g:indentLine_faster = 1
 " Mostrar espacios
 " set list
 " set lcs=tab:>-,eol:$,space:.
+
+" -----------------------------------------------------------------------------
+" Emmet
+" -----------------------------------------------------------------------------
+let g:user_emmet_install_global = 0
+let g:user_emmet_expandabbr_key="<Tab>"
+" autocmd FileType html, hbs, css EmmetInstall
 
 " -----------------------------------------------------------------------------
 " Vim-Session
@@ -286,8 +304,10 @@ if fancy_symbols_enabled
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''
     let g:airline_right_alt_sep = ''
-    let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.readonly = '⭤'
+    " let g:airline_symbols.branch = '⭠'
+    let g:airline_symbols.branch = ''
+    " let g:airline_symbols.readonly = '⭤'
+    let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = '⭡'
 else
     let g:webdevicons_enable = 0
