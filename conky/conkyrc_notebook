@@ -72,8 +72,8 @@ ${color2}SYSTEM  ${color1}${hr 1}
 ${color grey}RAM Usage: ${alignr}$color $mem/$memmax - $memperc% 
 ${membar 12}
 
-${color grey}Swap Usage: ${alignr}$color $swap/$swapmax - $swapperc% 
-${swapbar 12}
+# ${color grey}Swap Usage: ${alignr}$color $swap/$swapmax - $swapperc% 
+# ${swapbar 12}
 
 $color CORE 0 ${color1}${cpubar cpu0 12}
 $color CORE 1 ${color1}${cpubar cpu1 12}
@@ -82,6 +82,7 @@ $color CORE 3 ${color1}${cpubar cpu3 12}
 $color CORE 4 ${color1}${cpubar cpu4 12}
 $color CORE 5 ${color1}${cpubar cpu5 12}
 
+${color grey}Tenperature: ${alignr}${color white}${exec sensors | grep 'Package id' | awk '{print $4}'}
 ${color grey}Processes:$color $processes  ${alignr}${color grey}Running:$color $running_processes
 
 ${color2}DISK USAGE  ${color1}${hr 1}
@@ -102,11 +103,11 @@ ${color1}Power Draw ${alignr}${color} ${exec nvidia-smi -i 0| grep % | cut -c 21
 ${color2}NETWORK  ${color1}${hr 1}
 
 ${color}${upspeedgraph wlp0s20f3 40,220 ADC6D6 10354A -l} 
-${color}Up:     ${alignr}${upspeed wlp0s20f3}KB/s
+${color}Up:     ${alignr}${upspeed wlp0s20f3}
 ${color}Total:  ${alignr}${totalup wlp0s20f3}
 
 ${color}${downspeedgraph wlp0s20f3 40,220 ADC6D6 10354A -l}
-${color}Down:   ${alignr}${downspeed wlp0s20f3}KB/s
+${color}Down:   ${alignr}${downspeed wlp0s20f3}
 ${color}Total:  ${alignr}${totaldown wlp0s20f3}
 
 ${color2}BATTERY  ${color1}${hr 1}

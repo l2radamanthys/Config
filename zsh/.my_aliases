@@ -137,6 +137,7 @@ alias ,gg='git pull origin'
 alias ,gp='git push origin'
 alias ,gs='git status'
 alias ,ga='git add .'
+alias ,gd='dif diff'
 # alias ,gr='git reset --hard HEAD'
 
 # Alias Configuracion
@@ -258,5 +259,4 @@ alias ,dok-run='docker run -d'
 
 # Varios
 alias reiniciar='sudo reboot -r now'
-#alias apagar='sudo halt'
-alias apagar='sudo shutdown -r now'
+alias apagar='sudo shutdown -H now'

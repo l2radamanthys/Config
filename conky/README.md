@@ -20,3 +20,8 @@ Agregar el siguiente contenido
 Dar permiso de ejecucion
 
 	sudo chmod a+x /usr/bin/conky-start
+	
+Copiar el archivo correspondiente a la HOME y renombrar como `.conkyrc`
+
+	cp conky_notebook ~/.conkyrc
+	
