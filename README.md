@@ -1,4 +1,5 @@
 # Config
+
 Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a diario.
 
 ## Paquetes base a Instalar
@@ -12,7 +13,6 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 		vim vim-gtk \
 		chromium-browser curl wget \
 		gimp inkscape krita font-manager \
-		leafpad \
 		pcmanfm lxterminal \
 		pencil2d \
 		filezilla \
@@ -31,11 +31,8 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 		ttf-mscorefonts-installer \
 		fonts-cantarell \
 		lmodern \
-		ttf-aenigma \
-		ttf-georgewilliams \
 		ttf-bitstream-vera \
 		ttf-sjfonts \
-		ttf-unifont \
 		fonts-entypo \
 		fonts-isabella \
 		fonts-mplus \
@@ -47,7 +44,8 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 
 ## Instalar remarkable Visor/Editor Guia en Markdown
 
-Para visualizar mejor esta guia es necesario tener un visor Markdown, Remarkable es una excelente opción, se puede descargar desde https://remarkableapp.github.io/linux/download.html.
+Para visualizar mejor esta guia es necesario tener un visor Markdown, Remarkable es una excelente opción vea la correspondiente
+guia de instalación.
 
 ## Instalar XFCE 
 	
@@ -68,6 +66,12 @@ Instalar
 
 - xfce-terminal
 - brave
-- alacrity	
+- alacrity
 
+## No Candidates instalation 
+
+- leafpad
+- ttf-aenigma
+- ttf-unifont
+- ttf-georgewilliams
 

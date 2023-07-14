@@ -8,10 +8,12 @@
 	sudo apt-get install curl
 
 ### Instalación
-	
+
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 > NOTA: si al usar el comando nvm obtenemos el siguiente msj `nvm: command not found` reemplazar el archivo .bashrc
+
+    source ~/.nvm/nvm.sh
 
 ### Instalar yarn
 

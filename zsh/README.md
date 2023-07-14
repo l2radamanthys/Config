@@ -1,6 +1,6 @@
 # Instalar zsh
 
-    $ sudo apt-get install zsh
+    $ sudo apt-get install zsh curl wget
 
 
 ## configurar zsh por defecto

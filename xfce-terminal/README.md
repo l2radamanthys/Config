@@ -9,7 +9,7 @@ Instalar terminal
 
 Instalar themes
 
-    $ git clone https://github.com/chriskempson/base16-xfce4-terminal
+    $ git clone git@github.com:tinted-theming/base16-xfce4-terminal.git
     $ ./convert2themes
     $ sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
 

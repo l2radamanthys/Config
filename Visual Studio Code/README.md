@@ -8,7 +8,7 @@
 
 ### Linux Ubuntu
 
-	
+	Descargar desde https://code.visualstudio.com/download
 
 ## Cargar configuracion
 
