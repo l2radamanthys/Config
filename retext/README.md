@@ -2,6 +2,10 @@
 
 ## Instalar
 
+    sudo apt-add-repository universe
+    sudo apt-get update
+    sudo apt-get install retext
+
 Copiar la configuracion en:
 
     ~/.config/ReText project/ReText.conf
