@@ -48,6 +48,6 @@ Modificar el archivo `/etc/rc0.d` o ejecutar el comando
 
 ## instalar soporte python
 
-	sudo apt-get install libpq-dev python-dev python3-dev
+	sudo apt-get install libpq-dev python3-dev
 
 
