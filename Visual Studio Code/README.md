@@ -12,7 +12,7 @@
 
 ## Cargar configuracion
 
-Instalar paquete Sync y loguear con github
+Abrir Archivo -> Preferencias -> Turn On Settings Sync
 
 ## Configuracion
 
