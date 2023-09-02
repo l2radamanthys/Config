@@ -9,6 +9,7 @@ comandos:
 install:
 	@cp .zshrc ~/.zshrc
 	@cp .my_aliases ~/.my_aliases
+	@cp .bashrc ~/.bashrc
 
 diff_config:
 	@diffuse .zshrc ~/.zshrc
