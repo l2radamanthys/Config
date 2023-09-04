@@ -2,7 +2,7 @@
 
 ## Agregar Repositorio
 
-	sudo add-apt-repository ppa:mmstick76/alacritty
+	sudo add-apt-repository ppa:aslatter/ppa -y
 
 ## Instalación
 
