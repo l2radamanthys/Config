@@ -28,8 +28,9 @@
 	
 ## Otros
 
-	sudo -u postgres createuser ricardo
-	sudo -u postgres psql
+	sudo -u postgres
+    createuser ricardo
+	psql
 	ALTER USER ricardo SUPERUSER CREATEDB;
 	\q
 
