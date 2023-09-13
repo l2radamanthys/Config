@@ -66,6 +66,7 @@ Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` s
 	cp init.vim ~/.config/nvim/init.vim
 	cp -r ./autoload ~/.config/nvim
 	cp -r ./colors ~/.config/nvim
+	cp -r my_snippets ~/.config/nvim
 	
 Abrir neovim e instalar paquetes
 

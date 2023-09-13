@@ -57,7 +57,7 @@ Plug 'xolox/vim-session'    " vim session
 
 " Plug 'jeetsukumaran/vim-buffergator'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -87,7 +87,8 @@ set nowrap                                  " desactiva el cortado de linea
 set cursorline
 set number                                  " mostrar numero de linea
 " set guifont=Menlo\ 12                       " configurar fuente del editor
-set guifont=Meslo\ Nerd\ Font\ 12
+" set guifont=MesloLGL\ Nerd\ Font\ 12
+set guifont=Meslo\ LG\ S\ for\ Powerline\ 12
 set helplang=es                             " lenguaje de la Ayuda
 
 " colorscheme rDark.1.1                       " Tema de colores
@@ -300,13 +301,11 @@ if fancy_symbols_enabled
        let g:airline_symbols = {}
     endif
 
-    let g:airline_left_sep = ''
-    let g:airline_left_alt_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_right_alt_sep = ''
-    " let g:airline_symbols.branch = '⭠'
-    let g:airline_symbols.branch = ''
-    " let g:airline_symbols.readonly = '⭤'
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = '⎇'
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = '⭡'
 else
@@ -341,6 +340,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
+
+" Otra config
+let g:loaded_perl_provider = 0
 
 " -----------------------------------------------------------------------------
 " Comandos personalizados

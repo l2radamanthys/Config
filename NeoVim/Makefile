@@ -11,6 +11,7 @@ status:
 	@nvim +checkhealt
 
 install:
+	@mkdir -p ~/.config/nvim
 	@mv ~/.config/nvim/init.vim ~/.config/nvim/init.bak
 	@cp init.vim ~/.config/nvim/init.vim
 	@cp -r my_snippets ~/.config/nvim

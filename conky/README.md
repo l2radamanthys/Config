@@ -2,6 +2,12 @@
 
 	sudo apt-get install conky-all lm-sensors
 
+
+## Agregar soporte nvidia
+    
+    sudo apt-get install nvidia-utils-525
+
+
 ## Detectar sensores
 
 	sudo sensors-detect

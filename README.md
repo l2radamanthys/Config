@@ -23,7 +23,9 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 		autokey-gtk \
 		build-essential \
 		ubuntu-restricted-extras \
-		thunar-archive-plugin
+		thunar-archive-plugin \
+        xarchiver rar unrar zip unzip \
+        eog
 
 ### Instalar fuentes true type
 	
@@ -47,7 +49,7 @@ Guia de comfiguracion de la mayoria de mis aplicaciones y programas que uso a di
 Para visualizar mejor esta guia es necesario tener un visor Markdown, Remarkable es una excelente opción vea la correspondiente
 guia de instalación.
 
-## Instalar XFCE 
+## Instalar XFCE
 	
 	sudo apt-get update
 	sudo apt-get install xfce4
