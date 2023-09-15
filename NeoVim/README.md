@@ -22,12 +22,12 @@ Instalar version GTK
 #### Agregar soporte portapapeles
 
 	sudo apt install xclip
-	
+
 ### Instalar soporte python
 
 	sudo python3 -m pip install neovim
-	sudo python -m pip install neovim
-	
+	sudo python3.9 -m pip install neovim
+
 ó
 
 	sudo pip3 install neovim
@@ -38,7 +38,7 @@ En caso que quiera actualizar a la version mas nueva:
 
 	sudo pip install --upgrade neovim
 	sudo pip3 install --upgrade neovim
-	
+
 Si no tiene instalado **pip** instalar antes con:
 
 	sudo apt-get install python-pip python3-pip
@@ -54,11 +54,11 @@ Si no tiene instalado **pip** instalar antes con:
 ### Revisar Dependencias
 
 	nvim +checkhealth
-	
+
 Si se encuentra en el directorio de este archivo tambien puede ejecutar el alias 
-	
-	make status 
-	
+
+	make status
+
 ### Personalización
 
 Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` si, no existe crearlo, copiar los archivos de este directorio ahi. 
@@ -67,12 +67,12 @@ Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` s
 	cp -r ./autoload ~/.config/nvim
 	cp -r ./colors ~/.config/nvim
 	cp -r my_snippets ~/.config/nvim
-	
+
 Abrir neovim e instalar paquetes
 
 	nvim
 	:PlugInstall
-	
+
 ## Otros
 
 ## FZF
@@ -87,16 +87,13 @@ Fuzzi file finder.
 
 [Repositorio](https://github.com/sharkdp/fd) descargar el archivo [*.dev](https://github.com/sharkdp/fd/releases)
 
-	
-### bat 
+### bat
 Resaltado de sintaxis instalar el paquete [*.deb](https://github.com/sharkdp/bat/releases)
 
-
-	
 ## Nerd Fonts
 
 Algunos complementos necesitan que se setee la fuente o que se defina en consola la fuente de Nerd Font, descargar desde [Repositorio Nerd Fonts](https://github.com/ryanoasis/nerd-fonts), sugeridas
-	
+
 - Meslo
 - Source Code Pro
 
@@ -105,10 +102,10 @@ Descomprima los archivos y copie el contenido dentro de  `~/.fonts`
 Ejecutar el siguiente comando para actualizar cache de fuentes
 
 	fc-cache -fv
-	
-## Jedi
 
-	pip3 install --user jedi
+### Jedi
+
+	python3 -m install jedi
 
 ## Instalación en Windows
 
