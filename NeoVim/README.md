@@ -63,6 +63,7 @@ Si se encuentra en el directorio de este archivo tambien puede ejecutar el alias
 
 Para instalar los archivos asegurese que exista el directorio `~/.config/nvim` si, no existe crearlo, copiar los archivos de este directorio ahi. 
 
+    mkdir -p /home/ricardo/.config/nvim
 	cp init.vim ~/.config/nvim/init.vim
 	cp -r ./autoload ~/.config/nvim
 	cp -r ./colors ~/.config/nvim
@@ -105,7 +106,7 @@ Ejecutar el siguiente comando para actualizar cache de fuentes
 
 ### Jedi
 
-	python3 -m install jedi
+	python3 -m pip install jedi
 
 ## Instalación en Windows
 
