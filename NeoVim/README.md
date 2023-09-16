@@ -80,6 +80,8 @@ Abrir neovim e instalar paquetes
 
 Fuzzi file finder.
 
+    sudo apt-get install fzf
+
 ### ag
 
 	sudo apt-get install silversearcher-ag
@@ -108,9 +110,6 @@ Ejecutar el siguiente comando para actualizar cache de fuentes
 
 	python3 -m pip install jedi
 
-## Instalación en Windows
-
-Requiere tener git instalado
 
 
 
