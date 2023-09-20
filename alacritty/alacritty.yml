@@ -15,9 +15,15 @@ font:
     family: MesloLGL Nerd Font
     style: Bold Italic
 
-  size: 10
+  size: 8.0
 
 cursor:
-  style: Beam
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block
+
+selection:
+  save_to_clipboard: true
 
 window.opacity: 0.9

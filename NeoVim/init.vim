@@ -20,7 +20,7 @@ Plug 'airblade/vim-rooter'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'mustache/vim-mustache-handlebars'     " soporte para handlebars incluido en polyglot
 
-Plug 'vim-airline/vim-airline'              " Airline status ba             
+Plug 'vim-airline/vim-airline'              " Airline status ba
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdtree'
@@ -52,7 +52,7 @@ Plug 'honza/vim-snippets'
 Plug 'tomasiser/vim-code-dark'                  " VSCodeDark theme
 " Plug 'Quramy/tsuquyomi'
 
-Plug 'xolox/vim-misc'    
+Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'    " vim session
 
 " Plug 'jeetsukumaran/vim-buffergator'
@@ -78,7 +78,7 @@ set hidden                                  " cambiar de buffer sin guardar
 set expandtab                               " insertar espacios en lugar de <Tab>s
 set tabstop=4                               " tamaño tabulacion
 set shiftwidth=4                            " identacion tamaño y que sea automatica
-retab     
+retab
 set autoindent
 set nowrap                                  " desactiva el cortado de linea
 " set paste
@@ -117,7 +117,7 @@ set lcs+=space:·
 " set guitablabel=%t
 au GUIEnter * set lines=30 columns=100      " Configura el tama? inicial de la ventana al abrir vim
 
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 set title
 set titlestring=NeoVim:\ %-25.55F\ %a%r%m titlelen=70
@@ -133,7 +133,7 @@ let g:loaded_node_provider = 0
 hi StatusLine guibg=gray ctermbg=gray
 set laststatus=2                            " barra de estado siempre visible
 " set statusline =Archivo:\ %t
-" set statusline +=\ T:\ %y\ LB:\ [%{&ff}]    " tipo y codificacion 
+" set statusline +=\ T:\ %y\ LB:\ [%{&ff}]    " tipo y codificacion
 " set statusline +=\ Bufer:\ %n
 " right align
 " set statusline +=%=
@@ -154,16 +154,17 @@ nmap _lt tablast
 
 " map <A-Left> :tabp<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
 map <A-Right> :bnext<CR>            " Moverse entre pestañas Alt + <- / Alt + ->
-" map <A-Right> :tabn<CR>               
-map <A-Left> :bprevious<CR>               
+" map <A-Right> :tabn<CR>
+map <A-Left> :bprevious<CR>
 " map tt :tabnew<CR>
 map tt :enew<CR>
 
 " Mapeo de teclas
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
-" Abrir Fzf 
+" Abrir Fzf
 map <Leader>p :GFiles<CR>
+map <Leader>o :Files<CR>
 map <Leader>e :Files<CR>
 map <Leader>g :GFiles<CR>
 map <Leader>b :Ag<CR>
@@ -178,7 +179,7 @@ map <Leader>h :set syntax=mustache<CR>
 " map <Leader>b :BuffergatorToggle<CR>
 
 " borra todos los espacios en blanco
-map <Leader>sc :%s/\s\+$//e<CR>    
+map <Leader>sc :%s/\s\+$//e<CR>
 " copiar al portapapeles
 map <Leader>c "+y
 map <Leader>r :!python3 %:p<CR>
