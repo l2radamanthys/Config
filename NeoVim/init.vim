@@ -167,9 +167,12 @@ map <Leader>p :GFiles<CR>
 map <Leader>o :Files<CR>
 map <Leader>e :Files<CR>
 map <Leader>g :GFiles<CR>
+map <Leader>m :GF?<CR>
 map <Leader>b :Ag<CR>
 map <Leader>a :Buffers<CR>
+
 " nnoremap <C-f> :FZF<CR>
+map <Leader>f :FZF<CR>
 map <Leader>j :vertical resize -10<CR>
 map <Leader>l :vertical resize +10<CR>
 map <Leader>v :vsplit<CR>
@@ -209,7 +212,7 @@ let NERDTreeNodeDelimiter = "\x07"
 " let g:ctrlp_cmd = 'CtrlP'
 
 " -----------------------------------------------------------------------------
-" Neoplete
+" Deoplete
 " -----------------------------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option({
@@ -266,7 +269,7 @@ let g:indentLine_faster = 1
 " -----------------------------------------------------------------------------
 let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key="<Tab>"
-" autocmd FileType html, hbs, css EmmetInstall
+autocmd FileType html, hbs, css, scss EmmetInstall
 
 " -----------------------------------------------------------------------------
 " Vim-Session
@@ -342,8 +345,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" -----------------------------------------------------------------------------
 " Otra config
-let g:loaded_perl_provider = 0
+" -----------------------------------------------------------------------------
+let g:loaded_perl_provider = 0 " Desactivar soporte para Perl
 
 " -----------------------------------------------------------------------------
 " Comandos personalizados
