@@ -55,8 +55,10 @@ Plug 'tomasiser/vim-code-dark'                  " VSCodeDark theme
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'    " vim session
 
-" Plug 'jeetsukumaran/vim-buffergator'
+" Ack code search
+Plug 'mileszs/ack.vim'
 
+" Plug 'jeetsukumaran/vim-buffergator'
 " Plug 'github/copilot.vim'
 
 call plug#end()
@@ -172,7 +174,8 @@ map <Leader>b :Ag<CR>
 map <Leader>a :Buffers<CR>
 
 " nnoremap <C-f> :FZF<CR>
-map <Leader>f :FZF<CR>
+map <Leader>F :FZF<CR>
+map <Leader>f :BLines<CR>
 map <Leader>j :vertical resize -10<CR>
 map <Leader>l :vertical resize +10<CR>
 map <Leader>v :vsplit<CR>
@@ -186,6 +189,11 @@ map <Leader>sc :%s/\s\+$//e<CR>
 " copiar al portapapeles
 map <Leader>c "+y
 map <Leader>r :!python3 %:p<CR>
+
+" Ack.vim
+nmap ,r :Ack 
+nmap ,wr :execute ":Ack " . expand('<cword>')<CR>
+
 
 " -----------------------------------------------------------------------------
 " Configuracion de NERDTree
