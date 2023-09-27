@@ -58,7 +58,8 @@ Plug 'xolox/vim-session'    " vim session
 " Ack code search
 Plug 'mileszs/ack.vim'
 
-" Plug 'jeetsukumaran/vim-buffergator'
+Plug 'jeetsukumaran/vim-buffergator'
+
 " Plug 'github/copilot.vim'
 
 call plug#end()
@@ -127,6 +128,9 @@ set titlestring=NeoVim:\ %-25.55F\ %a%r%m titlelen=70
 
 let g:loaded_ruby_provider = 0
 let g:loaded_node_provider = 0
+
+" Deshabilitar combinacion por defecto buffergator
+let g:buffergator_suppress_keymaps = 1
 " let g:node_host_prog = '/home/ricardo/.nvm/versions/node/v10.17.0/lib/node_modules'
 
 " -----------------------------------------------------------------------------
@@ -164,6 +168,8 @@ map tt :enew<CR>
 " Mapeo de teclas
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
+map <Leader>bb :BuffergatorToggle<CR>
+map <Leader>bc :BuffergatorTabsClose<CR>
 " Abrir Fzf
 map <Leader>p :GFiles<CR>
 map <Leader>o :Files<CR>
@@ -178,16 +184,16 @@ map <Leader>F :FZF<CR>
 map <Leader>f :BLines<CR>
 map <Leader>j :vertical resize -10<CR>
 map <Leader>l :vertical resize +10<CR>
+map <Leader>h :split<CR>
 map <Leader>v :vsplit<CR>
 map <Leader>q :bd<CR>
 map <Leader>w :<C-w><C-w><CR>
-map <Leader>h :set syntax=mustache<CR>
-" map <Leader>b :BuffergatorToggle<CR>
 
 " borra todos los espacios en blanco
 map <Leader>sc :%s/\s\+$//e<CR>
 " copiar al portapapeles
 map <Leader>c "+y
+" ejecutar Script
 map <Leader>r :!python3 %:p<CR>
 
 " Ack.vim
