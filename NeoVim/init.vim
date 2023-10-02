@@ -62,6 +62,8 @@ Plug 'jeetsukumaran/vim-buffergator'
 
 " Plug 'github/copilot.vim'
 
+Plug 'EgZvor/vim-black', { 'branch': 'main' }
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -168,8 +170,8 @@ map tt :enew<CR>
 " Mapeo de teclas
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
-map <Leader>bb :BuffergatorToggle<CR>
-map <Leader>bc :BuffergatorTabsClose<CR>
+map <F4> :BuffergatorToggle<CR>
+" map <Leader>bc :BuffergatorTabsClose<CR>
 " Abrir Fzf
 map <Leader>p :GFiles<CR>
 map <Leader>o :Files<CR>
@@ -187,7 +189,7 @@ map <Leader>l :vertical resize +10<CR>
 map <Leader>h :split<CR>
 map <Leader>v :vsplit<CR>
 map <Leader>q :bd<CR>
-map <Leader>w :<C-w><C-w><CR>
+noremap <Leader>z <C-w><C-w><CR>
 
 " borra todos los espacios en blanco
 map <Leader>sc :%s/\s\+$//e<CR>
@@ -199,6 +201,10 @@ map <Leader>r :!python3 %:p<CR>
 " Ack.vim
 nmap ,r :Ack 
 nmap ,wr :execute ":Ack " . expand('<cword>')<CR>
+
+" Pressing < or > will let you indent/unident selected lines
+vnoremap < <gv
+vnoremap > >gv
 
 
 " -----------------------------------------------------------------------------
@@ -296,6 +302,12 @@ let g:session_autosave = 'yes'
 "
 " Mustache Fix
 au BufReadPost *.hbs set syntax=mustache
+
+
+" -----------------------------------------------------------------------------
+" Configuracion de black
+" -----------------------------------------------------------------------------
+let g:black_virtualenv = '~/.envs/black'
 
 " -----------------------------------------------------------------------------
 " Configuracion de Airline
